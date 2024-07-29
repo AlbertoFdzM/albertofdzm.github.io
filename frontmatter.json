@@ -1,0 +1,95 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.content.fmHighlight": true,
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Posts",
+      "path": "[[workspace]]/content/{{year}}/{{month}}",
+      "previewPath": "{{date|yyyy/MM}}",
+      "defaultLocale": "es",
+      "locales": [
+        {
+          "title": "Spanish",
+          "locale": "es",
+          "path": "."
+        }
+      ]
+    }
+  ],
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.framework.id": "nuxt",
+  "frontMatter.framework.startCommand": "npm run dev",
+  "frontMatter.git.enabled": true,
+  "frontMatter.git.commitMessage": "✍️ update content by Front Matter",
+  "frontMatter.panel.actions.disabled": [],
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.preview.trailingSlash": false,
+  "frontMatter.site.baseURL": "https://onlythepixel.com",
+  "frontMatter.taxonomy.alignFilename": false,
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": true,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Cover Image",
+          "name": "coverImage",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "SRC",
+              "name": "src",
+              "type": "image",
+              "isPreviewImage": true
+            },
+            {
+              "title": "Title",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.frontMatterType": "YAML",
+  "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd",
+  "frontMatter.taxonomy.seoDescriptionField": "description",
+  "frontMatter.templates.prefix": "",
+  "frontMatter.website.host": "https://onlythepixel.com"
+}
