@@ -25,6 +25,5 @@ const { data: posts } = await useAsyncData("posts", () => {
 </script>
 
 <template>
-  <h1>AlbertoFdzM</h1>
   <PostsList :posts />
 </template>
