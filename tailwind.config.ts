@@ -4,6 +4,7 @@ import daisyui from "daisyui";
 export default <Partial<Config>>{
   content: [
     "./nuxt.config.ts",
+    "./app.vue",
     "./pages/**/*.vue",
     "./layouts/**/*.vue",
     "./content/**/*.md",
