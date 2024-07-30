@@ -35,4 +35,8 @@ export default defineNuxtConfig({
     defaultLocale: "es",
     locales: ["es"],
   },
+
+  runtimeConfig: {
+    includeDrafts: false,
+  },
 });
