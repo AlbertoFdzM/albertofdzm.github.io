@@ -14,7 +14,7 @@ const { data: posts } = await useAsyncData("posts", () => {
     "image",
   ]);
 
-  if (!config.includeDrafts) {
+  if (!config.public.includeDrafts) {
     query = query.where({
       draft: false,
     });

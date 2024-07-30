@@ -37,6 +37,8 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    includeDrafts: false,
+    public: {
+      includeDrafts: false,
+    },
   },
 });
