@@ -45,7 +45,7 @@
         },
         {
           "title": "Cover Image",
-          "name": "coverImage",
+          "name": "image",
           "type": "fields",
           "fields": [
             {

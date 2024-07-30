@@ -10,7 +10,7 @@ tags:
 type: default
 keywords:
   - nuxt
-lastmod: 2024-07-29
+lastmod: 2024-07-30
 ---
 
 ## Intro

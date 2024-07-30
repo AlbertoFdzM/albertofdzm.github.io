@@ -23,9 +23,9 @@ defineProps(["post"]);
       </div>
       <header>
         <NuxtImg
-          v-if="post.coverImage"
-          :alt="post.title"
-          :src="post.coverImage.src"
+          v-if="post.image"
+          :alt="post.image.alt || post.title"
+          :src="post.image.src"
           class="mb-2 aspect-video max-h-36 w-full rounded-t-md object-cover brightness-50 group-hover:brightness-100 sm:absolute sm:left-0 sm:top-0 sm:mb-0 sm:h-full sm:max-h-full sm:w-44 sm:rounded-none sm:rounded-l-md lg:w-56"
           width="384"
           height="144"

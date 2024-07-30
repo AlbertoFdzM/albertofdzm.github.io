@@ -4,7 +4,7 @@ summary: This is a test post
 date: 9999-12-31
 lastmod: 2023-11-25
 draft: true
-coverImage:
+image:
   alt: Test Cover Image
   src: ./cover-image.jpg
 ---
