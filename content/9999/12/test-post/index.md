@@ -513,10 +513,13 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-```applescript
-tell application "Foo"
-    beep
-end tell
+```typescript
+import fs from "node:fs";
+
+const foo = "bar";
+
+// Read some data
+const data = fs.readFileSync("data.json");
 ```
 
 ## Span Elements
