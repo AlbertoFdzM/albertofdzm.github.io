@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     highlight: {
       langs: [
         "bash",
+        "css",
         "diff",
         "html",
         "javascript",
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
         "vue",
         "yaml",
       ],
-      theme: "night-owl",
+      theme: "dark-plus",
     },
     locales: ["es"],
   },
