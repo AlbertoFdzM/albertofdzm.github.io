@@ -14,3 +14,7 @@ html {
   aspect-ratio: 16 / 9;
   width: 100%;
 }
+
+.prose img {
+  @apply mx-auto;
+}
