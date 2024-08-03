@@ -394,7 +394,7 @@ Añadimos la propiedad `description` a los posts. Aquí dejo el ejemplo de `/con
 Como ya comenté al inicio del post, vamos a usar [GitHub Pages](https://pages.github.com/) para alojar el blog. Para ello tenemos definir un [workflow de GitHub](https://docs.github.com/es/actions) que nos permita construir y desplegar nuestra web a GitHub Pages.
 
 Primero, nos dirigimos a las settings de nuestro repositorio de GitHub, y en la sección de "Pages" cambiamos el selector de "Source" a "Github Actions":
-![Pantallazo de la sección de Pages en configuración de un repositorio de GitHub](/content/2024/07/como-crear-un-blog-con-nuxt/set-github-pages-to-build-from-github-actions.png)
+![Pantallazo de la sección de Pages en configuración de un repositorio de GitHub](./set-github-pages-to-build-from-github-actions.png)
 
 Después en nuestro proyecto, definimos el siguiente workflow `.github/workflows/deploy.yml`:
 
