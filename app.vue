@@ -1,14 +1,12 @@
 <template>
   <NuxtLoadingIndicator />
   <div id="top"></div>
-  <header class="fixed left-0 top-0 z-10 h-12 w-full">
-    <nav
-      class="navbar bg-gradient-to-br from-slate-800 to-gray-900 shadow-md shadow-black w-full"
-    >
-      <div class="container mx-auto flex h-full max-w-5xl items-center px-4">
-        <h1 class="flex h-full items-center">
-          <NuxtLink to="/">AlbertoFdzM</NuxtLink>
-        </h1>
+  <header class="fixed left-0 top-0 z-10 w-full">
+    <nav class="navbar bg-base-100 shadow-md shadow-black">
+      <div class="navbar-start">
+        <NuxtLink class="btn btn-ghost text-xl text-primary" to="/"
+          ><h1>AlbertoFdzM</h1></NuxtLink
+        >
       </div>
     </nav>
   </header>

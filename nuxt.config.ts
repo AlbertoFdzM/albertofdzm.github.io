@@ -8,8 +8,7 @@ export default defineNuxtConfig({
       },
       htmlAttrs: {
         lang: "es-ES",
-        class:
-          "min-h-screen bg-gray-900 bg-gradient-to-b from-gray-900 to-black font-sans text-base text-slate-200",
+        class: "min-h-screen bg-base-300",
       },
     },
   },

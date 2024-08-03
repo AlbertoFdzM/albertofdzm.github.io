@@ -9,3 +9,8 @@ html {
 #__nuxt {
   @apply min-h-screen;
 }
+
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}

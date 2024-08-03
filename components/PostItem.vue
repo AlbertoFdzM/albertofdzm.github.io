@@ -4,12 +4,44 @@ import {
   faPersonDigging,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { format } from "date-fns";
 
-defineProps(["post"]);
+const props = defineProps({
+  post: {
+    type: Object,
+    required: true,
+  },
+});
+
+const date = format(props.post.date, "yyyy-MM-dd");
 </script>
 
 <template>
-  <article class="mx-auto mb-4">
+  <article class="mb-4">
+    <NuxtLink :to="post._path" class="card md:card-side bg-base-100 shadow-xl">
+      <figure v-if="post.image">
+        <NuxtImg
+          :alt="post.image.alt || post.title"
+          :src="post.image.src"
+          width="384"
+          height="144"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          {{ post.title }}
+        </h2>
+        <p>{{ post.description }}</p>
+        <div class="card-actions justify-end">
+          <time class="inline-block" :datetime="post.date">
+            <FontAwesomeIcon class="mr-1" :icon="faCalendarDay" size="sm" />
+            <span>{{ date }}</span>
+          </time>
+        </div>
+      </div>
+    </NuxtLink>
+  </article>
+  <!-- <article class="mx-auto mb-4">
     <NuxtLink
       class="md group relative block rounded-md bg-gray-800 drop-shadow-xl transition-colors ease-in-out sm:pl-44 sm:pt-2 lg:pl-56"
       :to="post._path"
@@ -44,7 +76,7 @@ defineProps(["post"]);
         <p class="mb-2">{{ post.description }}</p>
 
         <footer class="text-right text-sm leading-none text-slate-400">
-          <!-- <div class="inline-block mr-2">
+          <div class="inline-block mr-2">
               <CommentCount
                 shortname={DISQUS_SHORTNAME}
                 config={{
@@ -52,7 +84,7 @@ defineProps(["post"]);
                   title: title,
                 }}
               />
-            </div> -->
+            </div>
           <time class="inline-block" :datetime="post.date">
             <FontAwesomeIcon class="mr-1" :icon="faCalendarDay" size="sm" />
             <span>{{ post.date }}</span>
@@ -60,7 +92,7 @@ defineProps(["post"]);
         </footer>
       </div>
     </NuxtLink>
-  </article>
+  </article> -->
 </template>
 
 <style></style>

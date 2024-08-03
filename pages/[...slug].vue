@@ -1,7 +1,7 @@
 <template>
   <ContentDoc>
     <template v-slot="{ doc: post }">
-      <article>
+      <article class="prose mx-auto max-w-sm sm:max-w-full">
         <h1>{{ post.title }}</h1>
         <ContentRenderer :value="post" />
       </article>

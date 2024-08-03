@@ -26,4 +26,8 @@ const { data: posts } = await useAsyncData("posts", () => {
 
 <template>
   <PostsList :posts />
+  <!-- <div class="join grid grid-cols-2 mb-4">
+    <button class="join-item btn" disabled>Anterior</button>
+    <button class="join-item btn">Siguiente</button>
+  </div> -->
 </template>

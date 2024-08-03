@@ -25,7 +25,7 @@ Hace ya tiempo en [NextChance](https://nextchanceinvest.com/) que venimos usando
 
 Aquí tienes un video bastante útil de introducción a Nuxt:
 
-<iframe width="1920" height="1080" src="https://www.youtube.com/embed/dCxSsr5xuL8" title="Nuxt in 100 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/dCxSsr5xuL8" title="Nuxt in 100 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 También puedes realizar el [tutorial de inicio que ofrece Nuxt](https://nuxt.com/docs/getting-started).
 
