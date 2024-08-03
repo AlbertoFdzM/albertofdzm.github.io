@@ -41,7 +41,7 @@ defineProps(["post"]);
         </h2>
       </header>
       <div class="px-3 pb-4">
-        <p class="mb-2">{{ post.summary }}</p>
+        <p class="mb-2">{{ post.description }}</p>
 
         <footer class="text-right text-sm leading-none text-slate-400">
           <!-- <div class="inline-block mr-2">
