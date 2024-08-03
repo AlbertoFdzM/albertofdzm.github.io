@@ -10,5 +10,9 @@
     <template #not-found>
       <h1>Página no encontrada</h1>
     </template>
+
+    <template #empty>
+      <h1>Página vacía</h1>
+    </template>
   </ContentDoc>
 </template>
