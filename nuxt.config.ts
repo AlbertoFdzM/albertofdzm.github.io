@@ -32,6 +32,19 @@ export default defineNuxtConfig({
 
   content: {
     defaultLocale: "es",
+    highlight: {
+      langs: [
+        "bash",
+        "diff",
+        "html",
+        "javascript",
+        "markdown",
+        "typescript",
+        "vue",
+        "yaml",
+      ],
+      theme: "night-owl",
+    },
     locales: ["es"],
   },
 

@@ -78,11 +78,10 @@ Este es mi primer post en el blog.
 
 Y de paso vamos a editar `/content/index.md`. Borramos todo su contenido y ponemos lo siguiente:
 
-```
+```markdown
 # Nuxt Blog
 
 [Mi primer post](/mi-primer-post)
-
 ```
 
 Una vez modificados los 2 archivos debería verse el enlace en la página principal y podremos navegar al primer post de nuestro blog.
