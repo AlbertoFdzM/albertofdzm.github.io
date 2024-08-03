@@ -2,7 +2,7 @@
 title: Cómo Crear un Blog con Nuxt
 description: Guía de creación de desarrollo de un blog usando Nuxt Content
 date: 2024-07-28
-draft: true
+draft: false
 tags:
   - nuxt
   - vue
@@ -34,7 +34,7 @@ También puedes realizar el [tutorial de inicio que ofrece Nuxt](https://nuxt.co
 Antes de ponernos manos a la obra voy a listar los requisitos que debe cumplir el proyecto:
 
 - Debe usar Nuxt.
-- Debe persistir los artículos del blog en formato [Markdown](https://wikipedia.org/wiki/Markdown).
+- Debe persistir los artículos del blog en formato [Markdown](https://wikipedia.org/wiki/Markdown) con bloques de [Front-matter](https://content.nuxt.com/usage/markdown#front-matter) para los metadatos.
 - Debe ser una web generada estáticamente alojada en [GitHub Pages](https://pages.github.com/).
 
 ## Creando un Proyecto con Nuxt Content
@@ -71,10 +71,14 @@ La plantilla de Nuxt Content que estamos usando ya viene preparada para detectar
 Creamos un fichero nuevo en `/content/mi-primer-post.md` con el siguiente contenido:
 
 ```markdown
-# Primer Post
+---
+title: Primer Post
+---
 
 Este es mi primer post en el blog.
 ```
+
+La sección delimitada por `---` es sintaxis de [Front-matter](https://content.nuxt.com/usage/markdown#front-matter).
 
 Y de paso vamos a editar `/content/index.md`. Borramos todo su contenido y ponemos lo siguiente:
 
@@ -101,7 +105,9 @@ Para simular esta estructura de URLs en nuestro proyecto tendríamos que tener l
 - `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`
 
   ```markdown
-  # Cómo Crear un Blog con Nuxt
+  ---
+  title: Cómo Crear un Blog con Nuxt
+  ---
 
   1. Intro
   1. Nuxt
@@ -115,7 +121,9 @@ Para simular esta estructura de URLs en nuestro proyecto tendríamos que tener l
 - `/content/posts/2024/08/next-vs-nuxt.md`
 
   ```markdown
-  # Next vs Nuxt
+  ---
+  title: Next vs Nuxt
+  ---
 
   1. Intro
   1. Next
@@ -130,7 +138,9 @@ Para simular esta estructura de URLs en nuestro proyecto tendríamos que tener l
 - `/content/posts/2024/09/mejorando-tu-blog-en-nuxt.md`
 
   ```markdown
-  # Mejorando tu Blog en Nuxt
+  ---
+  title: Mejorando tu Blog en Nuxt
+  ---
 
   1. Optimización de Rendimiento
   1. Mejoras SEO
@@ -138,7 +148,7 @@ Para simular esta estructura de URLs en nuestro proyecto tendríamos que tener l
   1. Mantenimiento y Actualizaciones
   ```
 
-Create estos 3 ficheros con su contenido y pasamos al siguiente punto.
+Una vez creados los ficheros podemos pasar al siguiente paso.
 
 Para poder listar los posts tendremos que definir una página de inicio creando el siguiente archivo `/pages/index.vue`:
 
@@ -147,7 +157,7 @@ Para poder listar los posts tendremos que definir una página de inicio creando 
   <h1>Nuxt Blog</h1>
   <ContentList path="/posts" v-slot="{ list: posts }">
     <article v-for="post in posts" :key="post._path">
-      <NuxtLink :href="post._path">
+      <NuxtLink :to="post._path">
         <h2>{{ post.title }}</h2>
       </NuxtLink>
     </article>
@@ -169,7 +179,7 @@ Si queremos implementar una navegación global con Nuxt Content lo más fácil s
 ```vue
 <template>
   <header>
-    <h1><NuxtLink href="/">Nuxt Blog</NuxtLink></h1>
+    <h1><NuxtLink to="/">Nuxt Blog</NuxtLink></h1>
   </header>
   <main>
     <NuxtPage />
@@ -180,14 +190,14 @@ Si queremos implementar una navegación global con Nuxt Content lo más fácil s
 
 Hemos añadido una cabecera y un pie de página.
 
-Tendremos editar el fichero `/pages/index.vue` para quitar el título:
+Quitamos de `/pages/index.vue` el título que ya no nos hace falta:
 
 ```diff
   <template>
 -   <h1>Nuxt Blog</h1>
     <ContentList path="/posts" v-slot="{ list: posts }">
       <article v-for="post in posts" :key="post._path">
-        <NuxtLink :href="post._path">
+        <NuxtLink :to="post._path">
           <h2>{{ post.title }}</h2>
         </NuxtLink>
       </article>
@@ -195,16 +205,17 @@ Tendremos editar el fichero `/pages/index.vue` para quitar el título:
   </template>
 ```
 
-Y también `/pages/[...slug].vue` para cambiar el tag `<main>` por un `<article>`:
+Y modificamos `/pages/[...slug].vue` para usar la propiedad `title`:
 
-```diff
-  <template>
--   <main>
-+   <article>
-      <ContentDoc />
--   </main>
-+   </article>
-  </template>
+```vue
+<template>
+  <article>
+    <ContentDoc v-slot="{ doc: post }">
+      <h1>{{ post.title }}</h1>
+      <ContentRenderer :value="post" />
+    </ContentDoc>
+  </article>
+</template>
 ```
 
 Una vez realizados estos cambios, los usuarios podrán volver a la página principal al pulsar sobre el título de la web.
@@ -220,7 +231,9 @@ Vamos a darle algo de vidilla a los artículos incluyendo alguna imagen. Para es
 Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`:
 
 ```diff
-  # Cómo Crear un Blog con Nuxt
+  ---
+  title: Cómo Crear un Blog con Nuxt
+  ---
 
 + ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
 
@@ -233,6 +246,148 @@ Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/conte
 ```
 
 ![Web en Nuxt Content con una imagen funcionando](nuxt-content-web-with-working-image.png)
+
+## Añadiendo estilos
+
+Vamos a añadirle estilos a la web para mejorar su apariencia. Esta vez vamos a hacer uso de [DaisyUI](https://daisyui.com/), una librería de componentes para el framework CSS de [Tailwind CSS](https://tailwindcss.com/). También aremos uso de del plugin [Tailwind Typography](https://tailwindcss-typography.vercel.app/) que incluye estilos para contenido.
+
+Podemos instalar los paquetes mediante los siguientes comandos:
+
+```bash
+npx nuxi@latest module add tailwindcss
+npm i -D daisyui@latest @tailwindcss/typography
+```
+
+La primera linea nos añadirá como dependencia el paquete [`@nuxtjs/tailwindcss`](https://tailwindcss.nuxtjs.org/) al proyecto y lo registrará como modulo en el fichero `nuxt.config.ts`. La segunda añadirá `daisyui` y `@tailwindcss/typography` como dependencias al proyecto. Nos falta registrar DaisyUI y Tailwind Typography en la configuración de Tailwind CSS.
+
+Debemos crear el fichero `tailwind.config.ts` en la raíz de nuestro proyecto:
+
+```typescript
+import type { Config } from "tailwindcss";
+import tailwindTypography from "@tailwindcss/typography";
+import daisyui from "daisyui";
+
+export default <Partial<Config>>{
+  content: [
+    "./nuxt.config.ts",
+    "./app.vue",
+    "./pages/**/*.vue",
+    "./content/**/*.md",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [tailwindTypography, daisyui],
+};
+```
+
+Y ahora aplicamos los siguientes cambios.
+
+Creamos un fichero `/assets/css/tailwind.css` para estilos generales:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+body,
+#__nuxt {
+  @apply bg-base-300 min-h-screen;
+}
+
+.title {
+  @apply mx-auto;
+  max-width: 560px;
+}
+
+.content {
+  @apply grid grid-cols-[1fr_min(560px,100%)_1fr];
+}
+
+.content > * {
+  @apply col-start-2 col-span-1;
+}
+```
+
+Modificamos el fichero `app.vue` para la navegación y el layout general:
+
+```vue
+<template>
+  <div class="min-h-screen flex flex-col">
+    <header class="navbar bg-base-100">
+      <h1>
+        <NuxtLink to="/" class="btn btn-ghost text-xl text-primary"
+          >Nuxt Blog</NuxtLink
+        >
+      </h1>
+    </header>
+    <main class="px-5 py-4 h-full flex-grow">
+      <NuxtPage />
+    </main>
+    <footer class="footer footer-center text-base-content p-4">
+      Creado con ❤️ usando Nuxt.
+    </footer>
+  </div>
+</template>
+```
+
+Modificamos la página principal `/pages/index.vue`
+
+```vue
+<template>
+  <section class="grid grid-cols-[1fr_min(570px,100%)_1fr]">
+    <ContentList path="/posts" v-slot="{ list: posts }">
+      <article
+        v-for="post in posts"
+        :key="post._path"
+        class="col-start-2 col-span-1 mb-4"
+      >
+        <NuxtLink :to="post._path" class="card bg-base-100">
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+          </div>
+        </NuxtLink>
+      </article>
+    </ContentList>
+  </section>
+</template>
+```
+
+La página de detalle de post `/pages/[...slug].vue`
+
+```vue
+<template>
+  <article class="prose min-w-full">
+    <ContentDoc v-slot="{ doc: post }">
+      <h1 class="title">{{ post.title }}</h1>
+      <ContentRenderer :value="post" class="content" />
+    </ContentDoc>
+  </article>
+</template>
+```
+
+Añadimos la propiedad `description` a los posts. Aquí dejo el ejemplo de `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`
+
+```diff
+  ---
+  title: Cómo Crear un Blog con Nuxt
++ description: Guía de como desarrollar un blog con Nuxt y Nuxt Content
+  ---
+
+  ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
+
+  1. Intro
+  1. Nuxt
+  1. Requisitos
+  1. Creando un Proyecto con Nuxt Content
+  1. Cómo Funciona Nuxt Content
+  1. Listando los Posts
+```
 
 ## Despliegue del Blog Nuxt
 
@@ -324,13 +479,10 @@ Al desplegar en `https://albertofdzm.github.io/nuxt-blog/`, necesitamos que Nuxt
 +   app: {
 +     baseURL: "/nuxt-blog/",
 +   },
-+
+
     devtools: { enabled: true },
 
-    // https://github.com/davestewart/nuxt-content-assets/?tab=readme-ov-file#nuxt-image
-    extends: ["node_modules/nuxt-content-assets/cache"],
-
-    modules: ["nuxt-content-assets", "@nuxt/content", "@nuxt/image"],
+    modules: ["@nuxt/content", "@nuxt/image", "@nuxtjs/tailwindcss"],
 
     routeRules: {
       "/": { prerender: true },
@@ -338,13 +490,15 @@ Al desplegar en `https://albertofdzm.github.io/nuxt-blog/`, necesitamos que Nuxt
 
     compatibilityDate: "2024-07-27",
   });
-
 ```
 
-Y además, cambiar la URL de la imagen que añadimos a nuestro post:
+Y además, cambiar las URLs de las imágenes que añadimos a nuestro post:
 
 ```diff
-  # Cómo Crear un Blog con Nuxt
+  ---
+  title: Cómo Crear un Blog con Nuxt
+  description: Guía de como desarrollar un blog con Nuxt y Nuxt Content
+  ---
 
 - ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
 + ![Logo de Nuxt blanco y verde](/../nuxt-logo-green-white.png){style="background: black;"}
@@ -357,3 +511,9 @@ Y además, cambiar la URL de la imagen que añadimos a nuestro post:
   1. Listando los Posts
 
 ```
+
+## Cierre
+
+Una vez completados estos pasos tendremos un blog hecho con Nuxt y Tailwind funcionando. Puedes ver el que he creado de ejemplo en [https://albertofdzm.github.io/nuxt-blog/](https://albertofdzm.github.io/nuxt-blog/).
+
+Aquí tienes el [repositorio de GitHub del proyecto](https://github.com/AlbertoFdzM/nuxt-blog).
