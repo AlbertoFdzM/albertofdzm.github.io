@@ -18,3 +18,7 @@ html {
 .prose img {
   @apply mx-auto;
 }
+
+.prose :not(pre) > code {
+  color: #569cd6;
+}
