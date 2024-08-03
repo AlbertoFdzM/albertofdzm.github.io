@@ -217,12 +217,12 @@ Vamos a darle algo de vidilla a los artículos incluyendo alguna imagen. Para es
 
 ![Logo de Nuxt blanco y verde](nuxt-logo-green-white.png)
 
-Vamos a posicionarla en nuestro primer posts en `/content/posts/2024/07/nuxt-logo-green-white.png`. Y a incluirlo en el post `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`:
+Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`:
 
 ```diff
   # Cómo Crear un Blog con Nuxt
 
-+ ![Logo de Nuxt blanco y verde](nuxt-logo-green-white.png){style="background: black;"}
++ ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
 
   1. Intro
   1. Nuxt
@@ -232,59 +232,91 @@ Vamos a posicionarla en nuestro primer posts en `/content/posts/2024/07/nuxt-log
   1. Listando los Posts
 ```
 
-Además, hemos incluido [atributos](https://content.nuxt.com/usage/markdown#attributes) en la imagen para poder ponerle el fondo negro.
-
-El problema de lo que acabamos de hacer es que la imagen no se va a ver:
-
-![Pantallazo de Post de Nuxt Content con imagen rota](nuxt-content-web-with-broken-image.png)
-
-Esto es debido a que Nuxt, y el módulo de Content, no permiten referenciar imágenes o archivos que estén fuera de la [carpeta pública de Nuxt](https://nuxt.com/docs/guide/directory-structure/public).
-
-En mi caso, para los posts, yo prefiero tener todos los archivos relativos a mis publicaciones en el mismo sitio (algo que [ya se ha pedido por más gente en el repo de Nuxt Content](https://github.com/nuxt/content/issues/2163)). Para esto existe un módulo de Nuxt capaz de solventar este problema, [Nuxt Content Assets](https://github.com/davestewart/nuxt-content-assets/).
-
-Instalamos el paquete:
-
-```bash
-npm install nuxt-content-assets
-```
-
-Y lo incluimos en nuestro fichero de [`nuxt.config.ts`](https://nuxt.com/docs/api/configuration/nuxt-config) junto con su configuración:
-
-```diff
-  // https://nuxt.com/docs/api/configuration/nuxt-config
-  export default defineNuxtConfig({
-    devtools: { enabled: true },
-
-+   // https://github.com/davestewart/nuxt-content-assets/?tab=readme-ov-file#nuxt-image
-+   extends: ["node_modules/nuxt-content-assets/cache"],
-
-+   // nuxt-content-assets debe ir ANTES que el de @nuxt/content
--   modules: ["@nuxt/content", "@nuxt/image"],
-+   modules: ["nuxt-content-assets", "@nuxt/content", "@nuxt/image"],
-
-    routeRules: {
-      "/": { prerender: true },
-    },
-
-    compatibilityDate: "2024-07-27",
-  });
-```
-
-Una vez aplicados los cambios podremos renderizar imágenes y otros assets ubicados dentro del directorio `content`.
-
 ![Web en Nuxt Content con una imagen funcionando](nuxt-content-web-with-working-image.png)
 
 ## Despliegue del Blog Nuxt
 
-Como ya comenté al inicio del post, vamos a usar [GitHub Pages](https://pages.github.com/) para alojar el blog. Para ello tenemos que subir el código del proyecto a un repositorio de Github, y activar la funcionalidad de GitHub Pages en la configuración del repo.
+Como ya comenté al inicio del post, vamos a usar [GitHub Pages](https://pages.github.com/) para alojar el blog. Para ello tenemos definir un [workflow de GitHub](https://docs.github.com/es/actions) que nos permita construir y desplegar nuestra web a GitHub Pages.
 
-![Video de como se pueden activar las GitHub Pages desde las settings de un repositorio](activate-github-pages-with-nuxt-workflow.webp){:modifiers='{ "animated": true }'}
+Primero, nos dirigimos a las settings de nuestro repositorio de GitHub, y en la sección de "Pages" cambiamos el selector de "Source" a "Github Actions":
+![Pantallazo de la sección de Pages en configuración de un repositorio de GitHub](/content/2024/07/como-crear-un-blog-con-nuxt/set-github-pages-to-build-from-github-actions.png)
 
-Una vez pulsemos en el botón de "configurar" se nos creará el siguiente archivo para definir un workflow de github `/.github/workflows/nuxtjs.yml` que vendrá ya preparado para ser commiteado. Una vez hagamos commit, GitHub arrancará una acción para desplegar nuestra página web. Si vuelves a la sección de configuración de GitHub Pages del repositorio podrás ver una sección que te permitirá acceder a la URL de tu blog. En mi caso se ha desplegado en https://albertofdzm.github.io/nuxt-blog/.
+Después en nuestro proyecto, definimos el siguiente workflow `.github/workflows/deploy.yml`:
 
-Recuerda bajarte (`git pull`) el commit que hiciste en GitHub para crear el workflow.
+```yaml
+name: Deploy to GitHub Pages
 
-GitHub Pages permite tener un dominio custom y multiples formas de configurar las páginas. Te recomiendo que revises la [documentación de GitHub Pages](https://docs.github.com/en/pages) para más información. En mi caso lo voy a dejar tal cuál, para ello me falta cambiar la propiedad [`baseUrl`](https://nuxt.com/docs/api/nuxt-config#baseurl) en el fichero de `nuxt.config.ts`:
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - "main"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            dist
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build:github_pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Una vez hagamos commit y subamos el código, GitHub arrancará una acción para desplegar nuestra página web. Si vuelves a la sección de configuración de GitHub Pages del repositorio podrás ver una sección que te permitirá acceder a la URL de tu blog. En mi caso se ha desplegado en https://albertofdzm.github.io/nuxt-blog/.
+
+GitHub Pages permite tener un dominio custom y multiples formas de configurar las páginas. Te recomiendo que revises la [documentación de GitHub Pages](https://docs.github.com/en/pages) para más información.
+
+## Configurando Nuxt para Funcionar en Subdirectorios
+
+Al desplegar en `https://albertofdzm.github.io/nuxt-blog/`, necesitamos que Nuxt tenga en consideración la tura `/nuxt-blog/` para que imágenes, links y referencias a otros recursos funcionen adecuadamente. Para ello tenemos que cambiar la propiedad [`baseUrl`](https://nuxt.com/docs/api/nuxt-config#baseurl) en el fichero de `nuxt.config.ts`:
 
 ```diff
   // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -306,5 +338,22 @@ GitHub Pages permite tener un dominio custom y multiples formas de configurar la
 
     compatibilityDate: "2024-07-27",
   });
+
+```
+
+Y además, cambiar la URL de la imagen que añadimos a nuestro post:
+
+```diff
+  # Cómo Crear un Blog con Nuxt
+
+- ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
++ ![Logo de Nuxt blanco y verde](/../nuxt-logo-green-white.png){style="background: black;"}
+
+  1. Intro
+  1. Nuxt
+  1. Requisitos
+  1. Creando un Proyecto con Nuxt Content
+  1. Cómo Funciona Nuxt Content
+  1. Listando los Posts
 
 ```
