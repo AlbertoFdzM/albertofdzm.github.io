@@ -11,6 +11,9 @@ type: default
 keywords:
   - nuxt
 lastmod: 2024-07-30
+image:
+  src: ./nuxt-logo-green-white.png
+  alt: Logo de Nuxt
 ---
 
 ## Intro
@@ -226,7 +229,7 @@ Una vez realizados estos cambios, los usuarios podrán volver a la página princ
 
 Vamos a darle algo de vidilla a los artículos incluyendo alguna imagen. Para este ejemplo vamos a usar la siguiente imagen:
 
-![Logo de Nuxt blanco y verde](nuxt-logo-green-white.png)
+[![Logo de Nuxt blanco y verde](nuxt-logo-green-white.png)](nuxt-logo-green-white.png)
 
 Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`:
 
@@ -235,7 +238,7 @@ Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/conte
   title: Cómo Crear un Blog con Nuxt
   ---
 
-+ ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png){style="background: black;"}
++ ![Logo de Nuxt blanco y verde](/nuxt-logo-green-white.png)
 
   1. Intro
   1. Nuxt

@@ -1,11 +1,9 @@
-<script lang="ts" setup>
-defineProps(["posts"]);
-</script>
-
 <template>
-  <div class="mx-auto max-w-sm sm:max-w-full" v-for="post in posts">
-    <PostItem :post />
-  </div>
+  <PostItem class="[&:not(:last-child)]:mb-4" v-for="post in posts" :post />
 </template>
 
-<style></style>
+<script lang="ts" setup>
+defineProps<{
+  posts: {}[];
+}>();
+</script>

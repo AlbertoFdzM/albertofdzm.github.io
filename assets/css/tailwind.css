@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth !important;
+  @apply !scroll-smooth;
 }
 
 #__nuxt {
   @apply min-h-screen;
 }
 
-.video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
+.prose {
+  @apply max-w-full;
 }
 
 .prose h1,
@@ -21,7 +20,7 @@ html {
 .prose h4,
 .prose h5,
 .prose h6 {
-  scroll-margin-top: 5rem;
+  @apply scroll-mt-20;
 }
 
 .prose img {
@@ -29,5 +28,9 @@ html {
 }
 
 .prose :not(pre) > code {
-  color: #569cd6;
+  @apply text-blue-400;
+}
+
+.prose .video {
+  @apply aspect-video w-full;
 }
