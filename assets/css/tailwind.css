@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 #__nuxt {
@@ -13,6 +13,15 @@ html {
 .video {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: 5rem;
 }
 
 .prose img {
