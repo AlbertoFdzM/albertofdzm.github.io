@@ -49,6 +49,8 @@ export default defineNuxtConfig({
     locales: ["es"],
   },
 
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
+
   runtimeConfig: {
     public: {
       includeDrafts: false,

@@ -7,25 +7,13 @@
           >Alberto Fernández</NuxtLink
         >
         con
-        <FontAwesomeIcon
-          class="text-red-500"
-          :icon="faHeart"
-          title="amor"
-        /><span class="sr-only">amor</span>
+        <FontAwesomeIcon class="text-red-500" icon="heart" title="amor" />
         y
-        <FontAwesomeIcon
-          class="text-blue-500"
-          :icon="faCode"
-          aria-hidden="true"
-          title="código"
-        /><span class="sr-only">código</span> usando
-        <NuxtLink to="https://nuxt.com/">Nuxt</NuxtLink>.
+        <FontAwesomeIcon class="text-blue-500" icon="code" title="código" />
+        usando <NuxtLink to="https://nuxt.com/">Nuxt</NuxtLink>.
       </p>
     </div>
   </footer>
 </template>
 
-<script setup lang="ts">
-import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-</script>
+<script setup lang="ts"></script>
