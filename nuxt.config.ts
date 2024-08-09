@@ -13,6 +13,10 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: ["@fortawesome/vue-fontawesome"],
+  },
+
   devtools: { enabled: true },
 
   extends: ["node_modules/nuxt-content-assets/cache"],
@@ -54,6 +58,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       includeDrafts: false,
+      pageSize: 20,
     },
   },
 });
