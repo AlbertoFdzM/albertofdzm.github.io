@@ -19,7 +19,7 @@ const isHidden = ref(false);
 if (import.meta.browser) {
   let lastScrollPosition = window.scrollY;
 
-  window.addEventListener("scroll", (ev) => {
+  function handleScroll() {
     requestAnimationFrame(() => {
       const newScrollPosition = window.scrollY;
 
@@ -33,7 +33,10 @@ if (import.meta.browser) {
 
       lastScrollPosition = newScrollPosition;
     });
-  });
+  }
+
+  onMounted(() => window.addEventListener("scroll", handleScroll));
+  onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 }
 </script>
 
