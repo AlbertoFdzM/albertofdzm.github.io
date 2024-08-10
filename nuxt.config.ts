@@ -21,11 +21,16 @@ export default defineNuxtConfig({
 
   extends: ["node_modules/nuxt-content-assets/cache"],
 
+  gtag: {
+    id: "",
+  },
+
   modules: [
     "nuxt-content-assets",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
+    "nuxt-gtag",
   ],
 
   routeRules: {
