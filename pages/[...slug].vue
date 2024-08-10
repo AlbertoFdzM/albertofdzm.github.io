@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-full px-4 sm:max-w-xl">
+  <ContentWrapper>
     <ContentDoc>
       <template v-slot="{ doc: post }">
         <PostDetail :post />
@@ -17,5 +17,5 @@
         </div>
       </template>
     </ContentDoc>
-  </div>
+  </ContentWrapper>
 </template>

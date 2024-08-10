@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-md px-4 sm:max-w-xl">
+  <ContentWrapper>
     <PostsList :posts />
     <div class="join grid mb-4" v-if="isLastPage">
       <NuxtLink class="btn" :to="previousPagePath">Anterior</NuxtLink>
@@ -8,7 +8,7 @@
       <NuxtLink class="join-item btn" :to="previousPagePath">Anterior</NuxtLink>
       <NuxtLink class="join-item btn" :to="nextPagePath">Siguiente</NuxtLink>
     </div>
-  </div>
+  </ContentWrapper>
 </template>
 
 <script setup lang="ts">
@@ -47,7 +47,7 @@ const { data: posts } = await useAsyncData("posts", () => {
   return query.find();
 });
 
-let { data: totalPosts } = await useAsyncData("totalPosts", () => {
+const { data: totalPosts } = await useAsyncData("totalPosts", () => {
   let query = queryContent();
 
   if (!config.public.includeDrafts) {
@@ -59,9 +59,36 @@ let { data: totalPosts } = await useAsyncData("totalPosts", () => {
   return query.count();
 });
 
+definePageMeta({
+  validate: async (route) => {
+    const config = useRuntimeConfig();
+
+    const pageSize = config.public.pageSize;
+
+    const { data: totalPosts } = await useAsyncData("totalPosts", () => {
+      let query = queryContent();
+
+      if (!config.public.includeDrafts) {
+        query = query.where({
+          draft: false,
+        });
+      }
+
+      return query.count();
+    });
+
+    const totalPages = Math.ceil(Number(totalPosts.value) / pageSize);
+
+    return (
+      typeof route.params.page === "string" &&
+      Number(route.params.page) <= totalPages
+    );
+  },
+});
+
 const totalPages = Math.ceil(Number(totalPosts.value) / pageSize);
 const isSecondPage = pageNumber === 2;
-const isLastPage = pageNumber === totalPages;
+const isLastPage = pageNumber >= totalPages;
 const previousPagePath = isSecondPage ? "/" : `/${previousPageNumber}`;
 const nextPagePath = `/${nextPageNumber}`;
 </script>

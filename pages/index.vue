@@ -1,10 +1,10 @@
 <template>
-  <div class="mx-auto max-w-md px-4 sm:max-w-xl">
+  <ContentWrapper>
     <PostsList :posts />
-    <div class="join grid mb-4" v-if="totalPages > 1">
+    <div class="join grid mb-4" v-if="!isLastPage">
       <NuxtLink class="btn" to="/2">Siguiente</NuxtLink>
     </div>
-  </div>
+  </ContentWrapper>
 </template>
 
 <script setup lang="ts">
@@ -49,4 +49,6 @@ let { data: totalPosts } = await useAsyncData("totalPosts", () => {
 
 const pageSize = config.public.pageSize;
 const totalPages = Math.ceil(Number(totalPosts.value) / pageSize);
+const pageNumber = 1;
+const isLastPage = pageNumber >= totalPages;
 </script>
