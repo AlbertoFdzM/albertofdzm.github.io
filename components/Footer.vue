@@ -3,7 +3,7 @@
     <div>
       <p class="prose">
         Creado por
-        <NuxtLink to="https://linkedin.com/in/albertofdzm"
+        <NuxtLink to="https://www.linkedin.com/in/albertofernandezmedina/"
           >Alberto Fernández</NuxtLink
         >
         con
