@@ -1,7 +1,7 @@
 ---
 title: Desarrollo Web Con Node - Basiquísimo
 date: 2015-03-19
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - NodeJS
   - NPM
@@ -11,7 +11,7 @@ tags:
 
 ## La Vieja Escuela
 
-Desde hace mucho tiempo, lo típico cuando desarrollabas una página **web con HTML, JS y CSS** era tener un servidor [Apache](http://httpd.apache.org/) o el _stack_ de [XAMPP](http://es.wikipedia.org/wiki/XAMPP) al que accediamos mediante la URL de `localhost`. También era posible que tuvieras un servidor o hosting contratado y directamente desarrollasemos en él por SSH o subiendo los archivos por FTP cada vez que los editabas para comporobar las modificaciones. Por último, podría ser que no utilizases ninguno de estos metodos y que directamente lo hicieras en local sin ningun servidor abriendo con el navegador los archivos HTML en cuyo caso lo que se vería en la ruta URL sería algo como `file:///ruta/a/tu/fichero.html`.
+Desde hace mucho tiempo, lo típico cuando desarrollabas una página **web con HTML, JS y CSS** era tener un servidor [Apache](http://httpd.apache.org/) o el _stack_ de [XAMPP](http://es.wikipedia.org/wiki/XAMPP) al que accedíamos mediante la URL de `localhost`. También era posible que tuvieras un servidor o hosting contratado y directamente desarrollásemos en él por SSH o subiendo los archivos por FTP cada vez que los editabas para comprobar las modificaciones. Por último, podría ser que no utilizases ninguno de estos métodos y que directamente lo hicieras en local sin ningún servidor abriendo con el navegador los archivos HTML en cuyo caso lo que se vería en la ruta URL sería algo como `file:///ruta/a/tu/fichero.html`.
 
 En todos los casos anteriores normalmente se trataba de una complicadez o un engorro por el tema de tenerlo todo descentralizado y no tan organizado como podría pretenderse.
 
@@ -21,11 +21,11 @@ Por si aún no lo sabes, [Node.js](http://es.wikipedia.org/wiki/Node.js) es un e
 
 ### Un Poco De Historia
 
-Todo empieza en [2009](https://github.com/joyent/node/tree/9d7895c567e8f38abfff35da1b6d6d6a0a06f9aa "Primer Commit en GitHub de NodeJS"), cuando se publica para Linux la primera versión de Node. Fue desarrollado por **Ryan Dahl** perteneciendo el código a **[Joyent Inc.](https://www.joyent.com/)**, que es la empresa en la que trabajaba en el momento en el que lo desarrolló.
+Todo empieza en [2009](https://github.com/joyent/node/tree/9d7895c567e8f38abfff35da1b6d6d6a0a06f9aa), cuando se publica para Linux la primera versión de Node. Fue desarrollado por **Ryan Dahl** perteneciendo el código a **[Joyent Inc.](https://www.joyent.com/)**, que es la empresa en la que trabajaba en el momento en el que lo desarrolló.
 
 Ryan sacó la idea al ver una barra de progreso en [Flickr](https://www.flickr.com/) para subir un archivo, la página en realidad no sabía a ciencia cierta en que estado estaba la carga del archivo, tenía que hacer una petición al servidor cada X tiempo para que este le indicará en que estado estaba la carga. Ryan quiso ir más allá.
 
-No fue hasta la [JSConf EU](http://jsconf.com/) de 2009 en Noviembre que NodeJS empezo a ganar popularidad.
+No fue hasta la [JSConf EU](http://jsconf.com/) de 2009 en Noviembre que NodeJS empezó a ganar popularidad.
 
 ### ¿Qué Te Aporta NodeJS?
 
@@ -37,7 +37,7 @@ Lo que vas a hacer hoy es lo más sencillo del _mundo Node_, vas a **utilizar No
 
 ## Instalando NodeJS
 
-Muy sencillo, [descargas NodeJS](https://nodejs.org/download/ "Descargar NodeJS") y lo instalas asegurandote de que durante la instalación se añada al PATH (No se si en mac esta gerga es la correcta) o tendrás que hacerlo tú manualmente después.
+Muy sencillo, [descargas NodeJS](https://nodejs.org/download/) y lo instalas asegurándote de que durante la instalación se añada al PATH (No se si en mac esta gerga es la correcta) o tendrás que hacerlo tú manualmente después.
 
 ## Tus Primeros Pasos Con NodeJS
 
@@ -56,7 +56,7 @@ Qué guay! Ya eres desarrollador web!
 
 ### Operaciones Simples Con NodeJS
 
-Prueba a hacer un par de operaciones muy sencillas para que veas lo que sabe hacer Node. Para esto lo que tienes que hacer es ejecutar `node`, a secas, en la consola y pasarás a la **consola de Node** que ejecuta JavaScript (Lenguaje de programación que [deberías saber](http://www.codecademy.com/es/courses/javascript-beginner-es-4j293/ "Curso de Inicio a JavaScript") antes de seguir leyendo). Ejecuta un par de comandos:
+Prueba a hacer un par de operaciones muy sencillas para que veas lo que sabe hacer Node. Para esto lo que tienes que hacer es ejecutar `node`, a secas, en la consola y pasarás a la **consola de Node** que ejecuta JavaScript (Lenguaje de programación que [deberías saber](http://www.codecademy.com/es/courses/javascript-beginner-es-4j293/) antes de seguir leyendo). Ejecuta un par de comandos:
 
 ```bash
 node
@@ -99,7 +99,7 @@ Ahora crea un nuevo directorio que no esté en una ruta muy complicada. Yo por e
 
 Si no lo has deducido por el título, te explico, [HTTP-Server](https://www.npmjs.com/package/http-server) se trata de un paquete disponible en el catálogo de NPM. HTTP-Server es un _script_ de JavaScript que al ejecutarlo crea un servidor HTTP en Node.
 
-Para instalarlo puedes usar NPM con una series de comandos que te permitiran disponer de este _script_ en tu equipo. Antes de instalarlo con NPM tienes que saber que NPM **tiene dos formas básicas de instalar paquetes**, de forma local o global. Al instalar un paquete de forma local sólo tendrás acceso a sus scripts desde el directorio en el que lo instalaste, mientras que al instalar un paquete de manera global tendrás acceso a los scripts desde cualquier parte del sistema.
+Para instalarlo puedes usar NPM con una series de comandos que te permitirán disponer de este _script_ en tu equipo. Antes de instalarlo con NPM tienes que saber que NPM **tiene dos formas básicas de instalar paquetes**, de forma local o global. Al instalar un paquete de forma local sólo tendrás acceso a sus scripts desde el directorio en el que lo instalaste, mientras que al instalar un paquete de manera global tendrás acceso a los scripts desde cualquier parte del sistema.
 
 Yo te recomiendo que el paquete de HTTP-Server lo instales de manera global para poder utilizarlo siempre que quieras estés donde estés por consola. Para ello, lo único que tiene que hacer es lo siguiente. Abre una consola y ejecuta el siguiente comando:
 
@@ -111,7 +111,7 @@ Verás que empiezan a salir trazas indicando el estado de la instalación, prest
 
 _**Nota:** Si no deseas tener HTTP-Server instalado de manera global debes posicionarte en el directorio que hayas creado y ejecutar el mismo comando sin el parámetro `-g`._
 
-Ahora que ya tienes el paquete de HTTP-Server en el equipo puedes ejecutar los scripts para crear y levantar el servidor web en local mediante el siguiente comando (acuerdate de posicionarte en la carpeta que creaste antes de ejecutarlo):
+Ahora que ya tienes el paquete de HTTP-Server en el equipo puedes ejecutar los scripts para crear y levantar el servidor web en local mediante el siguiente comando (acuérdate de posicionarte en la carpeta que creaste antes de ejecutarlo):
 
 ```bash
 http-server
@@ -124,7 +124,7 @@ Starting up http-server, serving ./ on: http://0.0.0.0:8080
 Hit CTRL-C to stop the server
 ```
 
-Quiere decir que tu server ya está arrancado (Puedes pararlo con `Cntrl+C`) y escuchando en el puerto `8080`, si entonces abres un navegador y visitas _<http://localhost:8080>_ verás el **Index of** de tu server, esto es por que aún no tienes ningún archivo en tu directorio, puedes hacer la prueba creando un **index.html** en tu carpeta con lo siguiente:
+Quiere decir que tu server ya está arrancado (Puedes pararlo con `Cntrl+C`) y escuchando en el puerto `8080`, si entonces abres un navegador y visitas _http://localhost:8080_ verás el **Index of** de tu server, esto es por que aún no tienes ningún archivo en tu directorio, puedes hacer la prueba creando un **index.html** en tu carpeta con lo siguiente:
 
 ```html
 <!DOCTYPE html>

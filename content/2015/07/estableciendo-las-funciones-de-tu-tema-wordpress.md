@@ -35,7 +35,7 @@ Te vas a hartar de hacer funciones así que [si aún no sabes programar como mí
 
 ## Fichero `functions.php`
 
-Vamos al lío! Con los archivos que creamos en la [última lección](/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress/), abre el archivo `functions.php` y arriba del todo pon lo siguiente:
+Vamos al lío! Con los archivos que creamos en la [última lección](/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress), abre el archivo `functions.php` y arriba del todo pon lo siguiente:
 
 ```php
 <?php
@@ -67,7 +67,7 @@ De nuevo, en tu fichero `functions.php` vas a escribir un par de lineas debajo d
  add_action( 'after_setup_theme', 'the_first_pixel_content_width', 0 );
 ```
 
-Te explico, se define la función que setea `content_width`, y se acopla a un “punto de anclaje” o “acción”, en este caso a `after_setup_theme`, lo que hace que la función se ejecute en un momento determina durante la carga de wordpress. Tu función también ejecuta un [“filtro”](https://codex.wordpress.org/es:Plugin_API#Filtros) por si los temás hijos/plugins quieren sobreescribir el valor.
+Te explico, se define la función que setea `content_width`, y se acopla a un “punto de anclaje” o “acción”, en este caso a `after_setup_theme`, lo que hace que la función se ejecute en un momento determina durante la carga de WordPress. Tu función también ejecuta un [“filtro”](https://codex.wordpress.org/es:Plugin_API#Filtros) por si los temas hijos/plugins quieren sobrescribir el valor.
 
 Pues ya tienes la propiedad `$content_width` seteada!
 
@@ -134,7 +134,7 @@ El código está bastante documentado, así que espero que no te hayas quedado c
 
 Estás importando dos ficheros que se encuentran en el directorio de `/inc`, que son `template-tags.php` y `tweaks.php`. Un par de lineas más abajo vas a tener que trastear con ellos, no te preocupes.
 
-Después de eso, se está llamando a la función `load_theme_textdomain()`. Está función se encarga de decirle a WordPress que este tema es valido para traducciones y que dichas traducciones se encuentran en la carpeta de `/languages`. Siempre que hagas un tema de WordPress, tienes que intentar que todo lo que escribes y se vaya a mostrar en el tema es traducible. Nunca se sabe cuando te harás famoso y miles de personas en todo el mundo querran u sarlo. En otra lección te hablaré de las traducciones, pero si te pica la curiosidad puedes visitar la [sección de I18n para desarrolladores de WordPress](https://codex.wordpress.org/I18n_for_WordPress_Developers).
+Después de eso, se está llamando a la función `load_theme_textdomain()`. Está función se encarga de decirle a WordPress que este tema es valido para traducciones y que dichas traducciones se encuentran en la carpeta de `/languages`. Siempre que hagas un tema de WordPress, tienes que intentar que todo lo que escribes y se vaya a mostrar en el tema es traducible. Nunca se sabe cuando te harás famoso y miles de personas en todo el mundo querrán usarlo. En otra lección te hablaré de las traducciones, pero si te pica la curiosidad puedes visitar la [sección de I18n para desarrolladores de WordPress](https://codex.wordpress.org/I18n_for_WordPress_Developers).
 
 Muy bien, las siguientes dos funciones son las encargadas de activar funcionalidades chulas a WordPress. La primera añade un link al feed RRS y la siguiente activa el [formato de entrada](http://codex.wordpress.org/es:Formatos_de_Entrada) de “minientrada”. La última función registra una posición para un [menú de navegación](http://codex.wordpress.org/Navigation_Menus), la cual tendrás que usar más adelante.
 
@@ -166,7 +166,7 @@ Más adelante se abordará más en profundidad este tema, no te preocupes, vamos
 
 ### `tweaks.php`
 
-Las funciones que vas a posicionar en este fichero no tienen nava que ver con las “template-tags”. En vez de esom aquí iran las funciones encargadas de “Mejorar” funcionalidades ya existentes en WordPress. Básicamente se encargarán de añadir “genialidad” a tu tema WordPress.
+Las funciones que vas a posicionar en este fichero no tienen nava que ver con las “template-tags”. En vez de eso aquí irán las funciones encargadas de “Mejorar” funcionalidades ya existentes en WordPress. Básicamente se encargarán de añadir “genialidad” a tu tema WordPress.
 
 ```php
 <?php

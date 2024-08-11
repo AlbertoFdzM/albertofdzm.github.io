@@ -11,7 +11,7 @@ tags:
 
 ![GulpJS Logo](/old-posts-images/2015/04/gulp.png)
 
-En otro momento ya hablé sobre las [utilidades que tiene NodeJS en el desarrollo FrontEnd](/2015/03/desarrollo-web-con-node-basiquisimo/ "Desarrollo Web Con Node – Basiquísimo") abordando lo más básico, hoy vas a leer acerca de una **herramienta** que te va a facilitar la vida en lo que se refiere a desarrollo web. Esta utilidad es [**Gulp**](http://gulpjs.com/ "GulpJS").
+En otro momento ya hablé sobre las [utilidades que tiene NodeJS en el desarrollo FrontEnd](/2015/03/desarrollo-web-con-node-basiquisimo) abordando lo más básico, hoy vas a leer acerca de una **herramienta** que te va a facilitar la vida en lo que se refiere a desarrollo web. Esta utilidad es [**Gulp**](http://gulpjs.com/).
 
 ## Qué es Gulp?
 
@@ -19,16 +19,16 @@ Se trata de una utilidad desarrollada sobre NodeJS para la **automatización y g
 
 ![Gulp 7-Eleven](/old-posts-images/2015/04/gulp-7-eleven.jpg)
 
-No sé exactamente de dónde sale el nombre y la imagen que lo define, por curiosidad y rebuscando un poco he llegado a la conclusión de que podría hacer alusión a una marca de máquinas expendedoras de refrescos perteneciente a [7-Eleven](http://es.wikipedia.org/wiki/7-Eleven "7-Eleven"), claro que en este caso no tienen nada que ver… ¿O sí…?
+No sé exactamente de dónde sale el nombre y la imagen que lo define, por curiosidad y rebuscando un poco he llegado a la conclusión de que podría hacer alusión a una marca de máquinas expendedoras de refrescos perteneciente a [7-Eleven](http://es.wikipedia.org/wiki/7-Eleven), claro que en este caso no tienen nada que ver… ¿O sí…?
 
 ### Entubando al Jabalí
 
-Antes de ensuciarte las manos tienes que saber que **GulpJS** es el competidor directo de [**GruntJS**](http://gruntjs.com/ "GruntJS"), que no es nada más lejos que otra utilidad con la misma finalidad.
+Antes de ensuciarte las manos tienes que saber que **GulpJS** es el competidor directo de [**GruntJS**](http://gruntjs.com/), que no es nada más lejos que otra utilidad con la misma finalidad.
 
 Las **diferencias más importantes entre GruntJS y GulpJS** son los métodos usados para el procesamiento de archivos:
 
 - GruntJS procesa los archivos de tal manera que, en cadenas de procesamiento con varios puntos, se genera un archivo temporal a partir del primer proceso cogiendo el archivo original, este archivo temporal es recogido por le segundo proceso y así hasta la finalización de la cadena de procesado donde se genera un archivo resultante. Normalmente las configuraciones de GruntJS se definen desacopladas de las tareas.
-- GulpJS procesa los archivos por medio de métodos `pipe()` similares a [los que usa NodeJS](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options "Metodo pipe de NodeJS") para el procesado de [**Streams**](http://es.wikipedia.org/wiki/Streaming), de está manera se procesa el archivo por **Streaming** (No se genera ningún archivo temporal) y ese _flujo de datos_ va pasando por los procesos definidos en la tarea de procesado del archivo y descargándose en un archivo final. Normalmente las configuraciones de GulpJS se definen en la misma tarea.
+- GulpJS procesa los archivos por medio de métodos `pipe()` similares a [los que usa NodeJS](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) para el procesado de [**Streams**](http://es.wikipedia.org/wiki/Streaming), de está manera se procesa el archivo por **Streaming** (No se genera ningún archivo temporal) y ese _flujo de datos_ va pasando por los procesos definidos en la tarea de procesado del archivo y descargándose en un archivo final. Normalmente las configuraciones de GulpJS se definen en la misma tarea.
 
 ![BowerJS vs GulpJS](/old-posts-images/2015/04/BowerJS-vs-GulpJS.jpeg)
 
@@ -51,7 +51,7 @@ Ya podemos empezar a trastear!
 
 ## Primeros Vasos
 
-Create un directorio (que será tu proyecto de pruebas) y llamalo por ejemplo `learn-gulp`, acto seguido sitúate con la consola en ese directorio e indica que Gulp es una dependencia de desarrollo (Se trata de operativa de proyectos con NPM para la definición de dependencias, que deberías conocer de antemano):
+Create un directorio (que será tu proyecto de pruebas) y llámalo por ejemplo `learn-gulp`, acto seguido sitúate con la consola en ese directorio e indica que Gulp es una dependencia de desarrollo (Se trata de operativa de proyectos con NPM para la definición de dependencias, que deberías conocer de antemano):
 
 `npm install gulp --save-dev`
 

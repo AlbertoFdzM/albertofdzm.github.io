@@ -1,7 +1,7 @@
 ---
 title: Utilizando la API de IFrame de YouTube
 date: 2015-07-07
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - YouTube API
 ---
@@ -83,7 +83,7 @@ function onYouTubeIframeAPIReady() {
 
   // Definimos nuestro objeto de video
   player = new YT.Player(
-    // El primer parametro será o bien una referencia a un elemento del DOM
+    // El primer parámetro será o bien una referencia a un elemento del DOM
     // o bien un ID de uno de los elementos, le cual será reemplazado por le iframe.
     "player",
     // El segundo parámetro se trata de un objeto con todas las opciones
@@ -96,15 +96,15 @@ Con esto habrás construido un reproductor de YouTube listo para mostrar videos.
 
 ## Opciones Extra Para El reproductor
 
-Ahora que ya tenemos el ejemplo básico prueba a añadirle algunas cosas más, la API de IFrame de YouTube permite añadir **opciones extra para el reproductor** que hacen que este sea mucho más personalizable o incluso una lista de reproducción. Estas opciónes se definen en el parámetro `playerVars`, aquí puedes ver una ejemplo con todas los opciones:
+Ahora que ya tenemos el ejemplo básico prueba a añadirle algunas cosas más, la API de IFrame de YouTube permite añadir **opciones extra para el reproductor** que hacen que este sea mucho más personalizable o incluso una lista de reproducción. Estas opciones se definen en el parámetro `playerVars`, aquí puedes ver una ejemplo con todas los opciones:
 
 ```javascript
 playerVars: {
-  // Si lo controles se pueden autoocultar o no
+  // Si lo controles se pueden auto-ocultar o no
   autohide: 1,
-  // Si el video debe iniciarse automaticamente
+  // Si el video debe iniciarse automáticamente
   autoplay: 0,
-  // Si se quiere forzar la muestra de subtitulos
+  // Si se quiere forzar la muestra de subtítulos
   cc_load_policy: 0,
   // El color de la barra de progreso (red/white)
   color: white,
@@ -114,11 +114,11 @@ playerVars: {
   disablekb: 0,
   // Active/Desactiva la API JS (se encuentra deprecada)
   enablejsapi: 0,
-  // El tiempo en segundos que tardará en deteners el repdroductor
+  // El tiempo en segundos que tardará en detener el reproductor
   end: 0,
-  // Muestra/Oculta el boton de pantalla completa
+  // Muestra/Oculta el botón de pantalla completa
   fs: 1,
-  // Configura el didioma para el reproductor
+  // Configura el idioma para el reproductor
   hl: 'es',
   // Configura las anotaciones del video (1 permite que se muestren / 3 impide que se muestren)
   iv_load_policy: 3,
@@ -126,11 +126,11 @@ playerVars: {
   // la consulta de la búsqueda, si listType es 'user_uploads' este parámetro deberá contener el
   // identificador del canal y si es 'playlist' este tendrá que contener el ID de la lista/video
   list: undefined,
-  // Sirve para indicar el tipo de lista (search/user_uploads/playlist) y guarda relación con el parametro list
+  // Sirve para indicar el tipo de lista (search/user_uploads/playlist) y guarda relación con el parámetro list
   listType: undefined,
   // Con este indicamos si queremos reproducir en bucle el video/lista de reproducción
   loop: 0,
-  // Este paráetro nos permite mostrar/ocultar el logotipo de youtube en el reproductor
+  // Este paráetro nos permite mostrar/ocultar el logotipo de YouTube en el reproductor
   modestbranding: 0,
   // En el caso de que hayamos indicado la propiedad enablejsapi a 1 aquí tendremos
   // que indicar el dominio
@@ -141,7 +141,7 @@ playerVars: {
   // Se trata de un parámetro exclusivo para iOS e indica si el video se reproducirá inline (1)
   // o a pantalla completa (0)
   playsinline: 0,
-  // Este parámetro nos sirve para indicar si querémos que el reproductor muestre
+  // Este parámetro nos sirve para indicar si queremos que el reproductor muestre
   // videos relacionados
   rel: 0,
   // Este parámetro se usa para mostrar u ocultar info sobre la lista o el usuarios
@@ -161,9 +161,9 @@ El parámetro que me falta por explicar es `events` que es el que registra los d
 
 ```javascript
 events: {
-  // Se dispara cuando el reproductor ha cargado la API y estña llisto para reproducir
+  // Se dispara cuando el reproductor ha cargado la API y está listo para reproducir
   onReady: onPlayerReady,
-  // Se lanza cada vez que el reproductor cambia de estado y recibe comoparámetro un número:
+  // Se lanza cada vez que el reproductor cambia de estado y recibe como parámetro un número:
   //    -1: sin empezar
   //    0: finalizado
   //    1: en reproducción
@@ -188,15 +188,15 @@ events: {
   onPlaybackQualityChange: onPlayerPlaybackQualityChange,
   // Se dispara cada vez que el ratio de reproducción cambia
   onPlaybackRateChange: onPlayerPlaybackRateChange,
-  // No hay mucho que explicar, cuanod hay un error:
+  // No hay mucho que explicar, cuando hay un error:
   //    2: La solicitud tiene algún parámetro erroneo
   //    5: Errores relacionados con el reproductor HTML5
   //    100: Video no encontrado
   //    101: No se permite la reproducción de ese video en reproductores embedidos
   //    150: Es lo mismo que el error 101
   onError: onPlayerError,
-  // Se produce cada vez que la API provee metodos nuevos a los que atacar. Por ahora
-  // sólo sirve para detectar la carga dle módulo de subtitulos 'cc' y explorar sus opciones
+  // Se produce cada vez que la API provee métodos nuevos a los que atacar. Por ahora
+  // sólo sirve para detectar la carga dle módulo de subtítulos 'cc' y explorar sus opciones
   onApiChange: onPlayerApiChange
 }
 ```
@@ -205,7 +205,7 @@ events: {
 
 Voy a exponer un par de ejemplos para entender mejor como funciona la API y como sacarle partido. Algo básico, por ejemplo, voy a mostrar los eventos en un listado.
 
-Primero tienes que añadir un contenerdor al HTML para que contenga estas entradas, voy a ponerlo después del reproductor:
+Primero tienes que añadir un contenedor al HTML para que contenga estas entradas, voy a ponerlo después del reproductor:
 
 ```html
 <div id="player"></div>
