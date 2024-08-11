@@ -9,7 +9,7 @@ tags:
 
 <!--kg-card-begin: markdown-->
 
-![GulpJS Logo](/old-posts-images/2015/04/gulp.png?fit=660%2C408)
+![GulpJS Logo](/old-posts-images/2015/04/gulp.png)
 
 En otro momento ya hablé sobre las [utilidades que tiene NodeJS en el desarrollo FrontEnd](/2015/03/desarrollo-web-con-node-basiquisimo/ "Desarrollo Web Con Node – Basiquísimo") abordando lo más básico, hoy vas a leer acerca de una **herramienta** que te va a facilitar la vida en lo que se refiere a desarrollo web. Esta utilidad es [**Gulp**](http://gulpjs.com/ "GulpJS").
 

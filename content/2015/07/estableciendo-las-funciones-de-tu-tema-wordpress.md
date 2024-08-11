@@ -1,7 +1,7 @@
 ---
 title: Estableciendo Las Funciones De Tu Tema WordPress
 date: 2015-07-08
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - Temas WordPress
   - WordPress
@@ -241,23 +241,23 @@ Madre! Que tupa a desarrollar. Espero que te haya gustado!
 
 ¿Preparado para dar tu primeros pasos en la creación de temas WordPress? Léelo desde el principio y empieza a desarrollar algo maravilloso!
 
-1. [Introducción Al Desarrollo De Temas WordPress](/2015/02/aprende-a-hacer-un-tema-en-wordpress/)
-2. [Desarrollando El Conocimiento De Temas](/2015/02/desarrollando-el-conocimiento-de-temas/)
-3. [Herramientas Para El Desarrollo De Temas](/2015/02/herramientas-para-el-desarrollo-de-temas/)
-4. [Creando Una Estructura HTML De Un Tema](/2015/03/creando-una-estructura-html-de-un-tema-wordpress/)
-5. [Plantillas Y Estructura De Carpetas](/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress/)
-6. [Estableciendo Las Funciones De Tu Tema](/2015/07/estableciendo-las-funciones-de-tu-tema-wordpress/)
-7. [Seguridad Para Tu Tema WordPress](/2015/07/seguridad-para-tu-tema-wordpress/)
-8. [La Plantilla De Header De Un Tema WordPress](/2015/07/la-plantilla-de-header-de-un-tema-wordpress/)
-9. [La Plantilla Inicio](/)
-10. [Las Plantillas Entrada, Adjunto Y 404](/)
-11. [La Plantilla Comentarios](/)
-12. [Las Plantillas Búsqueda Y Página](/)
-13. [La Plantilla Archivo](/)
-14. [Las Plantillas Sidebar Y Pie](/)
-15. [Resetear-Reconstruir El CSS Del Tema Y Definir Tus Diseños](/)
-16. [Fondo Y Cabecera Personalizados](/)
-17. [Publicando Tu Tema WordPress](/)
+1. [Introducción Al Desarrollo De Temas WordPress](/2015/02/aprende-a-hacer-un-tema-en-wordpress)
+1. [Desarrollando El Conocimiento De Temas](/2015/02/desarrollando-el-conocimiento-de-temas)
+1. [Herramientas Para El Desarrollo De Temas](/2015/02/herramientas-para-el-desarrollo-de-temas)
+1. [Creando Una Estructura HTML De Un Tema](/2015/03/creando-una-estructura-html-de-un-tema-wordpress)
+1. [Plantillas Y Estructura De Carpetas](/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress)
+1. [Estableciendo Las Funciones De Tu Tema](/2015/07/estableciendo-las-funciones-de-tu-tema-wordpress)
+1. [Seguridad Para Tu Tema WordPress](/2015/07/seguridad-para-tu-tema-wordpress)
+1. [La Plantilla De Header De Un Tema WordPress](/2015/07/la-plantilla-de-header-de-un-tema-wordpress)
+1. [La Plantilla Inicio](/)
+1. [Las Plantillas Entrada, Adjunto Y 404](/)
+1. [La Plantilla Comentarios](/)
+1. [Las Plantillas Búsqueda Y Página](/)
+1. [La Plantilla Archivo](/)
+1. [Las Plantillas Sidebar Y Pie](/)
+1. [Resetear-Reconstruir El CSS Del Tema Y Definir Tus Diseños](/)
+1. [Fondo Y Cabecera Personalizados](/)
+1. [Publicando Tu Tema WordPress](/)
 
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 

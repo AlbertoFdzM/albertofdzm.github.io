@@ -1,7 +1,7 @@
 ---
 title: API Routing with Express
 date: 2016-12-17
-lastmod: 2017-09-06
+lastmod: 2024-08-11
 tags:
   - ExpressJS
   - NodeJS
@@ -14,9 +14,9 @@ tags:
 
 _**Note:** This is the 2nd post of a series of post about **Building APIs With Express**._
 
-Based on my last post about [Making APIs with Node and Express](/2016/12/making-apis-with-node-and-express/) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/01).
+Based on my last post about [Making APIs with Node and Express](/2016/12/making-apis-with-node-and-express) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/01).
 
-So, [I left the basement for my TODO API prepared](/2016/12/making-apis-with-node-and-express/). Now it's time to work in the different endpoints and HTTP verbs/methods that this API is going to use.
+So, [I left the basement for my TODO API prepared](/2016/12/making-apis-with-node-and-express). Now it's time to work in the different endpoints and HTTP verbs/methods that this API is going to use.
 
 ## `/v1/tasks`
 
