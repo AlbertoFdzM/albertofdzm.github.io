@@ -292,13 +292,13 @@ Con esto podrás ver los eventos que está lanzando el reproductor, lo normal es
 16:44:42:212 - onStateChange
 ```
 
-Prueba modificando valores con los controles dle reproductor para ver que eventos quedan registrados y así hacerte una idea de los evento sque se lanzan con cada interacción (Por ejemplo, al activar/desactivar las anotaciones se dispara el evento `onApiChange`).
+Prueba modificando valores con los controles dle reproductor para ver que eventos quedan registrados y así hacerte una idea de los eventos que se lanzan con cada interacción (Por ejemplo, al activar/desactivar las anotaciones se dispara el evento `onApiChange`).
 
 Gracias a estos eventos es posible detectar el estado del reproductor y actuar en base a ello.
 
 ## Las Funciones
 
-Además de los eventos la **API de IFrame de YouTube** también provee una seríe de metodos que te van a permitir “jugar” con el reproductor (botones personalizados, reproducciones simultaneas, carga de listas de reproducción, etc.).
+Además de los eventos la **API de IFrame de YouTube** también provee una serie de métodos que te van a permitir "jugar" con el reproductor (botones personalizados, reproducciones simultaneas, carga de listas de reproducción, etc.).
 
 Aquí tienes una lista con los métodos a los que puedes acceder por medio del objeto `YT.player`:
 

@@ -90,7 +90,7 @@ Lo explico por partes:
 <meta name="viewport" content="width=device-width">
 ```
 
-La primera linea indica el tipo de codificación que se está usando (normalmente `UTF-8` es lo que saldrá) y la segunda se encarga de fijar las medidas del `viewport` (que nombre más chulo), que es por decirlo de manera sencilla el “visor” de la web (es casi la ventana pero como que no), a través de él ves la web y al hacer scroll es él el que se mueve (no tú).
+La primera linea indica el tipo de codificación que se está usando (normalmente `UTF-8` es lo que saldrá) y la segunda se encarga de fijar las medidas del `viewport` (que nombre más chulo), que es por decirlo de manera sencilla el "visor" de la web (es casi la ventana pero como que no), a través de él ves la web y al hacer scroll es él el que se mueve (no tú).
 
 ```php
 <title><?php
@@ -222,7 +222,7 @@ function the_first_pixel_scripts() {
 add_action( 'wp_enqueue_scripts', 'the_first_pixel_scripts' );
 ```
 
-Aquí estoy haciendo uso de las funciones de WordPress [`wp_enqueue_style()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_style) y [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) para cargar las hojas de estilos CSS para el Tema WordPress y los archivos JavaScript. Es muy recomendable que uses estas dos funciones cada vez que quieras cargar este tipo de archivos en lugar de añadir su llamada [“hardcodeada”](https://es.wikipedia.org/wiki/Hard_code) en los archivos `header.php` o `footer.php`.
+Aquí estoy haciendo uso de las funciones de WordPress [`wp_enqueue_style()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_style) y [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) para cargar las hojas de estilos CSS para el Tema WordPress y los archivos JavaScript. Es muy recomendable que uses estas dos funciones cada vez que quieras cargar este tipo de archivos en lugar de añadir su llamada ["hardcodeada"](https://es.wikipedia.org/wiki/Hard_code) en los archivos `header.php` o `footer.php`.
 
 Después de definir la función `the_first_pixel()` verás la estoy anclando a la acción [`wp_enqueue_scripts`](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts), la cual se encarga de desplegar los links a los ficheros tanto en la cabecera como en el pie.
 

@@ -10,7 +10,7 @@ Voy a empezar a relatar con este articulo el uso de un [sistema de control de ve
 
 ## Cualidad principal de Git
 
-Git tiene una cualidad que lo diferencia de los demás sistemas de control de versiones, y una de las principales es la recopilación de **imágenes completas del repositorio**, quiere decir, que cada vez que demos de alta cambios en nuestro sistema de versiones para un repositorio en concreto Git generará una instantánea de como está cada archivo exactamente en ese momento. Otros sistemas simplemente hacen la “foto” al fichero que se ha modificado, algo que para algunos resulta más complicado y para otros menos engorroso, pero yo ahí no me meto.
+Git tiene una cualidad que lo diferencia de los demás sistemas de control de versiones, y una de las principales es la recopilación de **imágenes completas del repositorio**, quiere decir, que cada vez que demos de alta cambios en nuestro sistema de versiones para un repositorio en concreto Git generará una instantánea de como está cada archivo exactamente en ese momento. Otros sistemas simplemente hacen la "foto" al fichero que se ha modificado, algo que para algunos resulta más complicado y para otros menos engorroso, pero yo ahí no me meto.
 
 ## Práctica
 

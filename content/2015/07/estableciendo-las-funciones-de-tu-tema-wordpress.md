@@ -13,7 +13,7 @@ Primero, vas a añadir un par de funciones PHP a nuestro tema. Estas funciones t
 
 - Añadir funcionalidades integradas en WordPress como la personalización de fondos, cabeceras, formatos de entradas, etc.
 - Setear valores por defecto para el tema
-- Actuar como “contenedores” de código que podrás re-usar a los largo y ancho de tu tema WordPress
+- Actuar como "contenedores" de código que podrás re-usar a los largo y ancho de tu tema WordPress
 
 ## Archivos Que Crearás Y Editarás En Este Punto
 
@@ -21,7 +21,7 @@ Primero, vas a añadir un par de funciones PHP a nuestro tema. Estas funciones t
 - `inc/template-tags.php`
 - `inc/tweaks.php`
 
-Si eres un novatillo en PHP (o en programación en general), entonces piensa que una función es como una “máquina” que desempeña una tarea específica, sea dónde sea que la necesitemos, una función se define así:
+Si eres un novatillo en PHP (o en programación en general), entonces piensa que una función es como una "máquina" que desempeña una tarea específica, sea dónde sea que la necesitemos, una función se define así:
 
 ```php
 function mi_funcion() {
@@ -29,7 +29,7 @@ function mi_funcion() {
 }
 ```
 
-Te vas a hartar de hacer funciones así que [si aún no sabes programar como mínimo en PHP ya puedes ir “empollando”](http://www.codecademy.com/es/tracks/php-clone).
+Te vas a hartar de hacer funciones así que [si aún no sabes programar como mínimo en PHP ya puedes ir "empollando"](http://www.codecademy.com/es/tracks/php-clone).
 
 ## Fichero `functions.php`
 
@@ -49,7 +49,7 @@ Básicamente lo que acabas de hacer es documentar un poco tu código para que, c
 
 ### `$content_width`
 
-`$content_width` se trata de una variable de ámbito global encargada de definir el ancho máximo del contenido (como por ejemplo las imágenes que subas) en tu tema. Previene la subida de imágenes kilométricas que puedan sobrepasar el área del contenido principal de la página. Lo más coherente es setear el valores de `$content_width` a la anchura que vaya a tener la sección de tu contenido. Acuérdate del HTML que definiste anteriormente, este área es el `div` que tiene el ID “content”. Más adelante, mediante CSS tocarás la anchura de ese `div`, pero no ahora. Así que de momento setea esta propiedad a `640px` de ancho y revísala más adelante, cuando estés con el CSS.
+`$content_width` se trata de una variable de ámbito global encargada de definir el ancho máximo del contenido (como por ejemplo las imágenes que subas) en tu tema. Previene la subida de imágenes kilométricas que puedan sobrepasar el área del contenido principal de la página. Lo más coherente es setear el valores de `$content_width` a la anchura que vaya a tener la sección de tu contenido. Acuérdate del HTML que definiste anteriormente, este área es el `div` que tiene el ID "content". Más adelante, mediante CSS tocarás la anchura de ese `div`, pero no ahora. Así que de momento setea esta propiedad a `640px` de ancho y revísala más adelante, cuando estés con el CSS.
 
 De nuevo, en tu fichero `functions.php` vas a escribir un par de lineas debajo de las que ya tienes:
 
@@ -65,7 +65,7 @@ De nuevo, en tu fichero `functions.php` vas a escribir un par de lineas debajo d
  add_action( 'after_setup_theme', 'the_first_pixel_content_width', 0 );
 ```
 
-Te explico, se define la función que setea `content_width`, y se acopla a un “punto de anclaje” o “acción”, en este caso a `after_setup_theme`, lo que hace que la función se ejecute en un momento determina durante la carga de WordPress. Tu función también ejecuta un [“filtro”](https://codex.wordpress.org/es:Plugin_API#Filtros) por si los temas hijos/plugins quieren sobrescribir el valor.
+Te explico, se define la función que setea `content_width`, y se acopla a un "punto de anclaje" o "acción", en este caso a `after_setup_theme`, lo que hace que la función se ejecute en un momento determina durante la carga de WordPress. Tu función también ejecuta un ["filtro"](https://codex.wordpress.org/es:Plugin_API#Filtros) por si los temas hijos/plugins quieren sobrescribir el valor.
 
 Pues ya tienes la propiedad `$content_width` seteada!
 
@@ -134,15 +134,15 @@ Estás importando dos ficheros que se encuentran en el directorio de `/inc`, que
 
 Después de eso, se está llamando a la función `load_theme_textdomain()`. Está función se encarga de decirle a WordPress que este tema es valido para traducciones y que dichas traducciones se encuentran en la carpeta de `/languages`. Siempre que hagas un tema de WordPress, tienes que intentar que todo lo que escribes y se vaya a mostrar en el tema es traducible. Nunca se sabe cuando te harás famoso y miles de personas en todo el mundo querrán usarlo. En otra lección te hablaré de las traducciones, pero si te pica la curiosidad puedes visitar la [sección de I18n para desarrolladores de WordPress](https://codex.wordpress.org/I18n_for_WordPress_Developers).
 
-Muy bien, las siguientes dos funciones son las encargadas de activar funcionalidades chulas a WordPress. La primera añade un link al feed RRS y la siguiente activa el [formato de entrada](http://codex.wordpress.org/es:Formatos_de_Entrada) de “minientrada”. La última función registra una posición para un [menú de navegación](http://codex.wordpress.org/Navigation_Menus), la cual tendrás que usar más adelante.
+Muy bien, las siguientes dos funciones son las encargadas de activar funcionalidades chulas a WordPress. La primera añade un link al feed RRS y la siguiente activa el [formato de entrada](http://codex.wordpress.org/es:Formatos_de_Entrada) de "minientrada". La última función registra una posición para un [menú de navegación](http://codex.wordpress.org/Navigation_Menus), la cual tendrás que usar más adelante.
 
-Y tal y como has hecho antes se registra la función contra una “acción”, de nuevo `after_setup_theme`.
+Y tal y como has hecho antes se registra la función contra una "acción", de nuevo `after_setup_theme`.
 
 ## `template-tags.php` Y `tweaks.php`
 
 Aja! estos son los archivos que la función `the_first_pixel_setup()` estaba importando.
 
-Muy bien, ahora lo que toca es crear estos dos archivos (`template-tags.php` y `tweaks.php`) en la carpeta de `/inc`. La razon de estos archivos es conservar el código del fichero `functions.php` limpio y no muy grande, además de está manera consigues tener una organización mucho más “modular” del tema WordPress.
+Muy bien, ahora lo que toca es crear estos dos archivos (`template-tags.php` y `tweaks.php`) en la carpeta de `/inc`. La razon de estos archivos es conservar el código del fichero `functions.php` limpio y no muy grande, además de está manera consigues tener una organización mucho más "modular" del tema WordPress.
 
 ### `template-tags.php`
 
@@ -164,7 +164,7 @@ Más adelante se abordará más en profundidad este tema, no te preocupes, vamos
 
 ### `tweaks.php`
 
-Las funciones que vas a posicionar en este fichero no tienen nava que ver con las “template-tags”. En vez de eso aquí irán las funciones encargadas de “Mejorar” funcionalidades ya existentes en WordPress. Básicamente se encargarán de añadir “genialidad” a tu tema WordPress.
+Las funciones que vas a posicionar en este fichero no tienen nava que ver con las "template-tags". En vez de eso aquí irán las funciones encargadas de "Mejorar" funcionalidades ya existentes en WordPress. Básicamente se encargarán de añadir "genialidad" a tu tema WordPress.
 
 ```php
 <?php
@@ -245,8 +245,8 @@ Madre! Que tupa a desarrollar. Espero que te haya gustado!
 1. [Creando Una Estructura HTML De Un Tema](/2015/03/creando-una-estructura-html-de-un-tema-wordpress)
 1. [Plantillas Y Estructura De Carpetas](/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress)
 1. [Estableciendo Las Funciones De Tu Tema](/2015/07/estableciendo-las-funciones-de-tu-tema-wordpress)
-1. [Seguridad Para Tu Tema WordPress](/2015/07/seguridad-para-tu-tema-wordpress)
-1. [La Plantilla De Header De Un Tema WordPress](/2015/07/la-plantilla-de-header-de-un-tema-wordpress)
+1. [Seguridad Para Tu Tema WordPress](/)
+1. [La Plantilla De Header De Un Tema WordPress](/)
 1. [La Plantilla Inicio](/)
 1. [Las Plantillas Entrada, Adjunto Y 404](/)
 1. [La Plantilla Comentarios](/)

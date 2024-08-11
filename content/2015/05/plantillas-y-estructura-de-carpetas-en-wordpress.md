@@ -16,7 +16,7 @@ Todos los archivos estarán contenidos en una sola carpeta dentro de la carpeta 
 
 Recuerda que el tema que estamos desarrollando se basa en la estructura y código del tema [\_s](http://underscores.me/).
 
-Es un coñazo generar todos estos archivos vacíos, pero vas a tener que hacerlo si quieres aprender… o puedes [bajarlos de aquí](/old-posts-images/2015/05/the-first-pixel.zip).
+Es un coñazo generar todos estos archivos vacíos, pero vas a tener que hacerlo si quieres aprender... o puedes [bajarlos de aquí](/old-posts-images/2015/05/the-first-pixel.zip).
 
 Abre el fichero `style.css`. Este fichero se encarga, a parte de darle estilos al tema, de indicar a WordPress los datos del tema. Debes introducir la siguiente información (Yo he puesto los datos relevantes a mi tema, pero eres libre de introducir otros):
 

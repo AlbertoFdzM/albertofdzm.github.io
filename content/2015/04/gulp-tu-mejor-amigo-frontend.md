@@ -17,7 +17,7 @@ Se trata de una utilidad desarrollada sobre NodeJS para la **automatización y g
 
 ![Gulp 7-Eleven](/old-posts-images/2015/04/gulp-7-eleven.jpg)
 
-No sé exactamente de dónde sale el nombre y la imagen que lo define, por curiosidad y rebuscando un poco he llegado a la conclusión de que podría hacer alusión a una marca de máquinas expendedoras de refrescos perteneciente a [7-Eleven](http://es.wikipedia.org/wiki/7-Eleven), claro que en este caso no tienen nada que ver… ¿O sí…?
+No sé exactamente de dónde sale el nombre y la imagen que lo define, por curiosidad y rebuscando un poco he llegado a la conclusión de que podría hacer alusión a una marca de máquinas expendedoras de refrescos perteneciente a [7-Eleven](http://es.wikipedia.org/wiki/7-Eleven), claro que en este caso no tienen nada que ver... ¿O sí...?
 
 ### Entubando al Jabalí
 
@@ -89,7 +89,7 @@ gulp.task("adios", function () {
 });
 ```
 
-Ten cuidado no te de un ictus… Y pruébala hombre!
+Ten cuidado no te de un ictus... Y pruébala hombre!
 
 ```bash
 gulp adios

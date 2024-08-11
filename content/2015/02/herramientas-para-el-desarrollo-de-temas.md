@@ -11,7 +11,7 @@ Antes de empezar a desarrollar ningún tema WordPress, vamos a necesitar de un l
 
 ## Servidor Local de Testeo: XAMPP, MAMP, WAMP
 
-No hay mejor lugar para empezar a Desarrollar Temas WordPress que en tu propio ordenador. Para ello vas a necesitar convertir tu PC en un “servidor local”, básicamente un conjunto de programas que suele tener un servidor web normal (Apache, MySQL y PHP). Con esto podrás ser capaz de instalar WordPress en tu ordenador.
+No hay mejor lugar para empezar a Desarrollar Temas WordPress que en tu propio ordenador. Para ello vas a necesitar convertir tu PC en un "servidor local", básicamente un conjunto de programas que suele tener un servidor web normal (Apache, MySQL y PHP). Con esto podrás ser capaz de instalar WordPress en tu ordenador.
 
 Instalar estos programas por separado y configurarlos puede ser complicado si no estás acostumbrado a trastear con servidores web, terminales de consola y archivos de configuración, por ello la comunidad web ha creado un gran abanico de programas que harán esto por ti.
 
@@ -47,7 +47,7 @@ Puedes fabricar el tuyo propio generando tú el contenido y acto seguido exporta
 
 Cada una de estas opciones tienes sus pluses y contras. Lo que puedes hacer es **añadirlos todos** y de este modo asegurarte de que cubres todas las posibles variantes con tu tema.
 
-### Añadir un poco de contenido “real” también!
+### Añadir un poco de contenido "real" también!
 
 Nadie mejor que tú va a saber a **qué clase de contenido va a tener el tema que vas a desarrollar**, por lo que te recomiendo encarecidamente que generes por tu cuenta un **contenido que te sirva de apoyo**. Por ejemplo, si vas a desarrollar un tema de WordPress orientado a mostrar porciones de código lo suyo sería que tuvieras un par de posts y páginas con porciones de diferentes tipos de lenguaje o si el tema va a ir orientado a una web de fotos deberías centrarte en crear varios posts y páginas con los diferentes tipos de fotos que pueda incluir. Esto hará que cuando desarrolles tu tema te asegures de que cubres las funcionalidades que necesitas y que los estilos quedan bien.
 

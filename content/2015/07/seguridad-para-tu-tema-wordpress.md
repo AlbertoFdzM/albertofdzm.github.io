@@ -17,11 +17,11 @@ P’a matarte! la seguridad es importante en cualquier cosa que tenga que ver co
 
 En la [Biblia de WordPress](http://codex.wordpress.org/Data_Validation) hay una cita que reza:
 
-> Los datos no fiables provienen de muchas fuentes diferentes (usuarios, sitios de terceros, tu propia base de datos!, …) y todos estos necesitan ser validados tanto en su entrada como en su salida.
+> Los datos no fiables provienen de muchas fuentes diferentes (usuarios, sitios de terceros, tu propia base de datos!, ...) y todos estos necesitan ser validados tanto en su entrada como en su salida.
 
-Lo sé, lo sé (mi propia base de datos! ya no te puedes fiar ni de tu abuela…), por esta razón debes asumir que cualquier dato que venga o vaya dentro de tu tema WordPress será un dato no fiable, inseguro, y por ello, habrá que validarlo y sanearlo acorde a su naturaleza y cometido. Esto evitará que te hagan alguna gamberrada o salvajada como inyecciones SQL, o de JavaScript, problemas de [Cross-Site Scripting (XSS)](https://es.wikipedia.org/wiki/Cross-site_scripting) y muchas burradas más.
+Lo sé, lo sé (mi propia base de datos! ya no te puedes fiar ni de tu abuela...), por esta razón debes asumir que cualquier dato que venga o vaya dentro de tu tema WordPress será un dato no fiable, inseguro, y por ello, habrá que validarlo y sanearlo acorde a su naturaleza y cometido. Esto evitará que te hagan alguna gamberrada o salvajada como inyecciones SQL, o de JavaScript, problemas de [Cross-Site Scripting (XSS)](https://es.wikipedia.org/wiki/Cross-site_scripting) y muchas burradas más.
 
-WordPress es muy listo (y viejo) y por ello provee una serie de [funciones “mágicas” para el saneamiento y validación de datos](http://codex.wordpress.org/Data_Validation). Estás funciones ayudan a:
+WordPress es muy listo (y viejo) y por ello provee una serie de [funciones "mágicas" para el saneamiento y validación de datos](http://codex.wordpress.org/Data_Validation). Estás funciones ayudan a:
 
 - Convertir caracteres especiales como las comillas simples y dobles, el símbolo de unión, los signos de mayor y menor que, etc. en sus equivalentes codificados (`"`, `<`, `&`, etc.) dado que pueden ser conflictivos al ser procesados por algunos sistemas.
 - Corroborar que los datos que se están tratando son datos seguros o coherentes (por ejemplo, que un texto no contenga código HTML o que sea un email o un link).
@@ -40,7 +40,7 @@ Aquí va una ejemplo simplón!
 <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr('Curioso pero "cierto"'); ?>"><?php the_title(); ?></a>
 ```
 
-Espero que no te resulte muy complejo entenderlo, pero básicamente esto lo que va a hacer es imprimir en pantalla un link con el título de la entrada como texto y con _Curioso pero “cierto”_ como atributo de título (que es lo que aparece cuando posas unos segundos el ratón sobre el link). Lo traicionero aquí son las comillas dobles que tiene la palabra _cierto_ las cuales al pasar por la función de `esc_attr()` se van a convertir en dos bonitos `"` en nuestro código HTML (que en pantalla se verán como comillas dobles normales) evitando así que tu bonito Tema WordPress pete por algún lado.
+Espero que no te resulte muy complejo entenderlo, pero básicamente esto lo que va a hacer es imprimir en pantalla un link con el título de la entrada como texto y con _Curioso pero "cierto"_ como atributo de título (que es lo que aparece cuando posas unos segundos el ratón sobre el link). Lo traicionero aquí son las comillas dobles que tiene la palabra _cierto_ las cuales al pasar por la función de `esc_attr()` se van a convertir en dos bonitos `"` en nuestro código HTML (que en pantalla se verán como comillas dobles normales) evitando así que tu bonito Tema WordPress pete por algún lado.
 
 Tranquilo porque vamos a hacer más uso de todas estas funciones a lo largo de las lecciones.
 

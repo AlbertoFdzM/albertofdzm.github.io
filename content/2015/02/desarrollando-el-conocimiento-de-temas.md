@@ -7,27 +7,27 @@ tags:
   - WordPress
 ---
 
-## ¿Qué es el “Conocimiento de Temas”?
+## ¿Qué es el "Conocimiento de Temas"?
 
-¿Qué es el “Conocimiento de Temas”? _El Conocimiento de Temas_ es el sentido que te permite entender los Temas WordPress: las relaciones entre los diferentes archivos que componen un tema, y como cada uno de esos archivos funcionan con WordPress. El Conocimiento de Temas es lo que vas a poseer al final de este tutorial.
+¿Qué es el "Conocimiento de Temas"? _El Conocimiento de Temas_ es el sentido que te permite entender los Temas WordPress: las relaciones entre los diferentes archivos que componen un tema, y como cada uno de esos archivos funcionan con WordPress. El Conocimiento de Temas es lo que vas a poseer al final de este tutorial.
 
 ## El Conocimiento de Temas no trata sobre la memorización de código
 
-Hablemos, por ejemplo, de las matemáticas, el “conocimiento de los numero”. Si tu enseñas a un niño simplemente resultados aritméticos, cómo por ejemplo que 5+3=8 o que 2+3=5, sin ninguna referencia que le ayude a entender **el porqué de esos resultados**, el niño será incapaz de resolver otro caso que no haya estudiado. Si en lugar de esto, enseñamos los casos anteriores valiéndonos de otro tipo de referencias, como el típico ejemplo de las manzanas (si tengo 3 manzanas en una mano y 2 manzanas en la otra, tengo 5 manzanas en total), entonces, estaremos ayudando al niño a “ver” cómo funcionan los números. Entonces él podrá utilizar ese conocimiento para resolver cualquier problema con la misma índole, aún sin haber memorizado la respuesta.
+Hablemos, por ejemplo, de las matemáticas, el "conocimiento de los numero". Si tu enseñas a un niño simplemente resultados aritméticos, cómo por ejemplo que 5+3=8 o que 2+3=5, sin ninguna referencia que le ayude a entender **el porqué de esos resultados**, el niño será incapaz de resolver otro caso que no haya estudiado. Si en lugar de esto, enseñamos los casos anteriores valiéndonos de otro tipo de referencias, como el típico ejemplo de las manzanas (si tengo 3 manzanas en una mano y 2 manzanas en la otra, tengo 5 manzanas en total), entonces, estaremos ayudando al niño a "ver" cómo funcionan los números. Entonces él podrá utilizar ese conocimiento para resolver cualquier problema con la misma índole, aún sin haber memorizado la respuesta.
 
 El Conocimiento de Temas funciona del mismo modo. Es importante centrarse en la visión global de lo que tratas de conseguir en lugar de fracciones de código.
 
 ## ¿Cómo trabajar tu Conocimiento de Temas?
 
-Si has leído hasta aquí, ya casi has llegado. El Conocimiento de Temas consiste en darte cuenta de lo que estás haciendo y realizar decisiones acertadas en base a ello. Por ejemplo, si yo te pidiera que diseñaras un coche, tú automáticamente ya sabrías que partes ibas a incluir en tus diseños (Motor, chapa, neumáticos, ventanas, y suma y sigue. Puede que desconozcas cómo funciona cada parte, pero si podrías explicar por que son necesarias en el diseño, y sabrías comprobar la calidad de las mismas). Tus años de experiencia conduciendo y viajando en coches te han forjado ese “Conocimiento de Coches”.
+Si has leído hasta aquí, ya casi has llegado. El Conocimiento de Temas consiste en darte cuenta de lo que estás haciendo y realizar decisiones acertadas en base a ello. Por ejemplo, si yo te pidiera que diseñaras un coche, tú automáticamente ya sabrías que partes ibas a incluir en tus diseños (Motor, chapa, neumáticos, ventanas, y suma y sigue. Puede que desconozcas cómo funciona cada parte, pero si podrías explicar por que son necesarias en el diseño, y sabrías comprobar la calidad de las mismas). Tus años de experiencia conduciendo y viajando en coches te han forjado ese "Conocimiento de Coches".
 
-Usa un enfoque similar cuando visualices tu próximo Tema de WordPress. Algunas de las preguntas importantes que debes realizarte son: “¿Qué archivos necesito incluir en mi tema? ¿Qué función desempeñaran estos archivos? ¿Por qué voy a copiar esta porción de código en mi tema? ¿De dónde viene esta porción de código y quién la ha escrito? ¿Qué funcionalidad aplica este código? ¿Está actualizado? ¿Es seguro?”
+Usa un enfoque similar cuando visualices tu próximo Tema de WordPress. Algunas de las preguntas importantes que debes realizarte son: "¿Qué archivos necesito incluir en mi tema? ¿Qué función desempeñaran estos archivos? ¿Por qué voy a copiar esta porción de código en mi tema? ¿De dónde viene esta porción de código y quién la ha escrito? ¿Qué funcionalidad aplica este código? ¿Está actualizado? ¿Es seguro?"
 
 No es necesario que entiendas toda la mecánica que hay debajo de cada linea de PHP, dado que es posible que cambie en dos, tres o cuatro versiones posteriores. Lo que es verdaderamente importante, cómo con los coches, es que entiendas que es lo que está haciendo tu Tema internamente.
 
 Lo dicho, hay un par de cosas que puedes hacer para entrenar ese conocimiento genérico y mantener tu Conocimiento de Temas afinado.
 
-## Saber “Qué Hay De Nuevo” en WordPress
+## Saber "Qué Hay De Nuevo" en WordPress
 
 EL código de WordPress se usa en una gran cantidad de webs. Se puede encontrar incluso en local (offline), y dentro de libros o revistas. Cuando mires a las estrellas en el cielo de la noche, estarás viendo astros que existieron millones de años atrás. De forma parecida, cuando examines una muestra de código de WordPress, esa muestra se trata de una foto de WordPress que existió en el momento en que se escribió, y que no necesariamente existirá en el WordPress actual.
 
@@ -35,7 +35,7 @@ Teniendo conciencia de las ultimas versiones de WordPress y de sus principales f
 
 ## Mantener el hábito de comprobar fechas
 
-Una de las cosas que deberías hacer antes de leer ningún tutorial o copiar cualquier código es cerciorarte de la fecha de su elaboración. Recuerda lo que se indicó en Saber “Qué Hay De Nuevo” en WordPress, esto te ayudará a saber que partes del código que estás leyendo son útiles para usar en tu tema y cuales han quedado obsoletas. Como supongo que ya sabrás, es peligrosos usar código obsoleto en un tema de WordPress, dado que esto puede provocar agujeros de seguridad. El código en si no viene con una fecha de caducidad. Debes saber determinar la relevancia en cada caso.
+Una de las cosas que deberías hacer antes de leer ningún tutorial o copiar cualquier código es cerciorarte de la fecha de su elaboración. Recuerda lo que se indicó en Saber "Qué Hay De Nuevo" en WordPress, esto te ayudará a saber que partes del código que estás leyendo son útiles para usar en tu tema y cuales han quedado obsoletas. Como supongo que ya sabrás, es peligrosos usar código obsoleto en un tema de WordPress, dado que esto puede provocar agujeros de seguridad. El código en si no viene con una fecha de caducidad. Debes saber determinar la relevancia en cada caso.
 
 Ten en cuenta que si usas código desactualizado en tu tema no es el fin del mundo. Hay plugins, como [Developer](http://wordpress.org/extend/plugins/developer/) y [Theme-Check](http://wordpress.org/extend/plugins/theme-check/), que te ayudaran a mantener y optimizar el desarrollo de tu tema WordPress.
 
@@ -49,7 +49,7 @@ Los scripts copia-pega pueden volverse obsoletos muy rápido. Esto aplica no só
 
 ## Entender los elementos esenciales de los temas WordPress
 
-La mayoría de webs, corran o no sobre un WordPress, tienen las mismas secciones genéricas: una cabecera, un contenido principal, un aside, y un pie. Puede ayudar el pensar que estas secciones son bloques (o partes de un coche, es tu elección). Algunos bloques, cómo la cabecera, el contenido, el aside y el pie, los vas a usar con todos los temas que desarrolles. Tan sólo vas a varias la forma en que se posicionan para ser útiles de cara al usuario. Con los temas de WordPress, los archivos de plantillas como header.php, index.php, sidebar.php, y footer.php son tus “bloques”. Por lo tanto, el Tema será la estructura que formes al unir estos bloques.
+La mayoría de webs, corran o no sobre un WordPress, tienen las mismas secciones genéricas: una cabecera, un contenido principal, un aside, y un pie. Puede ayudar el pensar que estas secciones son bloques (o partes de un coche, es tu elección). Algunos bloques, cómo la cabecera, el contenido, el aside y el pie, los vas a usar con todos los temas que desarrolles. Tan sólo vas a varias la forma en que se posicionan para ser útiles de cara al usuario. Con los temas de WordPress, los archivos de plantillas como header.php, index.php, sidebar.php, y footer.php son tus "bloques". Por lo tanto, el Tema será la estructura que formes al unir estos bloques.
 
 Tomando conciencia de estos elementos esenciales te vendrá de ayuda para desarrollar tu conocimiento de temas. Para tener una vista rápida de las partes de un tema WordPress, puedes visitar [la página de Desarrollo de Temas en el Codex de WordPress](http://codex.wordpress.org/Theme_Development#Template_Files).
 

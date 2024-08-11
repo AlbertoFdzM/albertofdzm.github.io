@@ -8,7 +8,7 @@ tags:
   - WordPress
 ---
 
-En este articulo articulado te voy a enseñar la magia de utilizar la API para la personalización de temas en WordPress, ¿Qué qué es? serás tarugo… Bueno, se trata de un conjunto de código que nos permite meter mano a la pantalla de personalización de temas, te enseño una imagen para sacarte de dudas:
+En este articulo articulado te voy a enseñar la magia de utilizar la API para la personalización de temas en WordPress, ¿Qué qué es? serás tarugo... Bueno, se trata de un conjunto de código que nos permite meter mano a la pantalla de personalización de temas, te enseño una imagen para sacarte de dudas:
 
 ![Customization Panel](/old-posts-images/2013/04/Customization-Panel.jpg)
 

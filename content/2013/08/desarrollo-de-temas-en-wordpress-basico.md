@@ -17,7 +17,7 @@ Empezamos.
 
 Creo que la manera más sencilla de que aprendas como va todo este cotarro de implantar estilos y funcionalidades que ayudaran a tu web a ser aún más única e irreemplazable es la práctica, el ensayo y error y picar, picar tecla con todo lo que se explique, porque así se arraigaran mucho mejor todos los conocimientos que se den de aquí en adelante. Así pues intentaré dotar a todas las explicaciones y temas que exponga de una porción de código o una demo con la que puedas practicar, jugar y experimentar.
 
-A parte, no vamos a empezar directamente abordando los temas de WordPress si no que comenzaremos por los **temas hijo**, que son un área más fácil de asimilar y de empezar a desarrollar con la que podremos ir adentrándonos en los **temas “independientes”**. Dicho esto podemos empezar con la chicha y dejarnos de parloteos.
+A parte, no vamos a empezar directamente abordando los temas de WordPress si no que comenzaremos por los **temas hijo**, que son un área más fácil de asimilar y de empezar a desarrollar con la que podremos ir adentrándonos en los **temas "independientes"**. Dicho esto podemos empezar con la chicha y dejarnos de parloteos.
 
 ## Temas Hijos
 
