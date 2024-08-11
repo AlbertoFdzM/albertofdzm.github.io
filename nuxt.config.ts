@@ -25,12 +25,20 @@ export default defineNuxtConfig({
     id: "",
   },
 
+  linkChecker: {
+    report: {
+      html: true,
+      markdown: true,
+    },
+  },
+
   modules: [
     "nuxt-content-assets",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "nuxt-gtag",
+    "@nuxtjs/seo",
   ],
 
   routeRules: {
@@ -69,5 +77,16 @@ export default defineNuxtConfig({
       includeDrafts: false,
       pageSize: 20,
     },
+  },
+
+  seo: {
+    redirectToCanonicalSiteUrl: true,
+  },
+
+  site: {
+    url: "https://albertofdzm.github.io",
+    name: "Only The Pixel",
+    description: "Only The Pixel es el blog de Alberto Fernández",
+    defaultLocale: "es",
   },
 });
