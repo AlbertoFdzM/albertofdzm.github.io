@@ -61,7 +61,9 @@ let { data: totalPosts } = await useAsyncData("totalPosts", () => {
 });
 
 const pageSize = config.public.pageSize;
-const totalPages = Math.ceil(Number(totalPosts.value) / pageSize);
+const totalPages = computed(() =>
+  Math.ceil(Number(totalPosts.value) / pageSize)
+);
 const pageNumber = 1;
-const isLastPage = pageNumber >= totalPages;
+const isLastPage = computed(() => pageNumber >= totalPages.value);
 </script>

@@ -18,10 +18,10 @@ const config = useRuntimeConfig();
 const route = useRoute();
 
 const pageSize = config.public.pageSize;
-const pageNumber = Number(route.params.page);
-const nextPageNumber = pageNumber + 1;
-const previousPageNumber = pageNumber - 1;
-const offset = pageSize * (pageNumber - 1);
+const pageNumber = ref(Number(route.params.page));
+const nextPageNumber = computed(() => pageNumber.value + 1);
+const previousPageNumber = computed(() => pageNumber.value - 1);
+const offset = computed(() => pageSize * (pageNumber.value - 1));
 
 const postsAsyncData = await useAsyncData("posts", () => {
   let query = queryContent<Post>()
@@ -29,7 +29,7 @@ const postsAsyncData = await useAsyncData("posts", () => {
       date: -1,
     })
     .limit(config.public.pageSize)
-    .skip(offset);
+    .skip(offset.value);
 
   if (!config.public.includeDrafts) {
     query = query.where({
@@ -108,9 +108,11 @@ definePageMeta({
   },
 });
 
-const totalPages = Math.ceil(Number(totalPosts.value) / pageSize);
-const isSecondPage = pageNumber === 2;
-const isLastPage = pageNumber >= totalPages;
+const totalPages = computed(() =>
+  Math.ceil(Number(totalPosts.value) / pageSize)
+);
+const isSecondPage = computed(() => pageNumber.value === 2);
+const isLastPage = computed(() => pageNumber.value >= totalPages.value);
 const previousPagePath = isSecondPage ? "/" : `/${previousPageNumber}`;
 const nextPagePath = `/${nextPageNumber}`;
 </script>
