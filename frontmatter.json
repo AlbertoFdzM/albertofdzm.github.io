@@ -31,7 +31,7 @@
   "frontMatter.panel.actions.disabled": [],
   "frontMatter.preview.host": "http://localhost:3000",
   "frontMatter.preview.trailingSlash": false,
-  "frontMatter.site.baseURL": "https://albertofdzm.github.io",
+  "frontMatter.site.baseURL": "https://onlythepixel.com",
   "frontMatter.taxonomy.alignFilename": false,
   "frontMatter.taxonomy.contentTypes": [
     {
@@ -97,5 +97,5 @@
   "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd",
   "frontMatter.taxonomy.seoDescriptionField": "description",
   "frontMatter.templates.prefix": "",
-  "frontMatter.website.host": "https://albertofdzm.github.io"
+  "frontMatter.website.host": "https://onlythepixel.com"
 }

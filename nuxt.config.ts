@@ -91,7 +91,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://albertofdzm.github.io",
+    url: "https://onlythepixel.com",
     name: "Only The Pixel",
     description: "Only The Pixel es el blog de Alberto Fernández",
     defaultLocale: "es",
