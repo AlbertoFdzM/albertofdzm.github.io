@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       ignore: ["/2015/07/</span"],
-      routes: ["/sitemap.xml"],
+      routes: ["/sitemap.xml", "/robots.txt"],
     },
   },
 
