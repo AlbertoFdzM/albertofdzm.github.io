@@ -91,7 +91,16 @@ definePageMeta({
 
       if (!config.public.includeDrafts) {
         query = query.where({
-          draft: false,
+          draft: {
+            $or: [
+              {
+                $eq: false,
+              },
+              {
+                $exists: false,
+              },
+            ],
+          },
         });
       }
 
