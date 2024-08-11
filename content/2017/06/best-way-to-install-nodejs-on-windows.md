@@ -1,13 +1,11 @@
 ---
 title: Best Way to Install NodeJS on Windows
 date: 2017-06-04
-lastmod: 2017-08-27
+lastmod: 2024-08-11
 tags:
   - NodeJS
   - Windows
 ---
-
-<!--kg-card-begin: markdown-->
 
 I agree that working with a Mac is the best thing to develop in NodeJS these days without having any headache but here is my excuse to use Windows. I'm a gamer, and as a gamer, I use Windows to being able to play anything, but I also like to develop toy project in my free time or contribute to the open source cause, so I need a correct environment to work with.
 
@@ -73,5 +71,3 @@ v8.0.0
 Show now whenever you install npm packages they will be installed under that version and if you change version the packages will not be moved to the new one to avoid incompatibility problems so you will have to install them manually again (nvm for Mac does have a command for this `nvm install 8 --reinstall-packages-from=<oldVersion>`).
 
 And that's it, a small post for a huge tool!
-
-<!--kg-card-end: markdown-->

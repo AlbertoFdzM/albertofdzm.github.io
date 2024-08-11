@@ -7,8 +7,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 ## ¿Qué es el “Conocimiento de Temas”?
 
 ¿Qué es el “Conocimiento de Temas”? _El Conocimiento de Temas_ es el sentido que te permite entender los Temas WordPress: las relaciones entre los diferentes archivos que componen un tema, y como cada uno de esos archivos funcionan con WordPress. El Conocimiento de Temas es lo que vas a poseer al final de este tutorial.
@@ -102,5 +100,3 @@ Los puntos a tener en cuenta de esta lección son:
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper WordPress Theme Tutorial: 2nd Edition](http://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

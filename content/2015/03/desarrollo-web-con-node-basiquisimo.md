@@ -7,8 +7,6 @@ tags:
   - NPM
 ---
 
-<!--kg-card-begin: markdown-->
-
 ## La Vieja Escuela
 
 Desde hace mucho tiempo, lo típico cuando desarrollabas una página **web con HTML, JS y CSS** era tener un servidor [Apache](http://httpd.apache.org/) o el _stack_ de [XAMPP](http://es.wikipedia.org/wiki/XAMPP) al que accedíamos mediante la URL de `localhost`. También era posible que tuvieras un servidor o hosting contratado y directamente desarrollásemos en él por SSH o subiendo los archivos por FTP cada vez que los editabas para comprobar las modificaciones. Por último, podría ser que no utilizases ninguno de estos métodos y que directamente lo hicieras en local sin ningún servidor abriendo con el navegador los archivos HTML en cuyo caso lo que se vería en la ruta URL sería algo como `file:///ruta/a/tu/fichero.html`.
@@ -141,5 +139,3 @@ Quiere decir que tu server ya está arrancado (Puedes pararlo con `Cntrl+C`) y e
 Si vuelves a acceder a la misma URL verás la magia de Node.
 
 Ya puedes empezar a desarrollar webs tirando Apache a la basura! No te canses de aprender.
-
-<!--kg-card-end: markdown-->

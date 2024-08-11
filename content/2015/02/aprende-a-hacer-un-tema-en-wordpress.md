@@ -7,8 +7,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 ## Introducción
 
 **A lo largo de 16 temas**, este _tutorial de WordPress_ te va a mostrar cómo crear un **Tema WordPress desde cero**. Básicamente aprenderemos **todo** lo necesario en lo referente al desarrollo de Temas WordPress.
@@ -66,5 +64,3 @@ Si estás leyendo esto en un momento en el que Febrero de 2015 resulta una fecha
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper WordPress Theme Tutorial: 2nd Edition](http://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

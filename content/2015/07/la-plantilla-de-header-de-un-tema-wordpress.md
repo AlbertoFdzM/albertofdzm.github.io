@@ -3,11 +3,9 @@ title: La Plantilla de Header de un Tema WordPress
 date: 2015-07-24
 lastmod: 2024-08-11
 tags:
-    - Temas WordPress
-    - WordPress
+  - Temas WordPress
+  - WordPress
 ---
-
-<!--kg-card-begin: markdown-->
 
 Te toca empezar a darle rasgos a tu pequeño Tema de WordPress, empezando por la cabeza, el archivo `header.php` y validándolo con un estándar _HTML Doctype_. Vas a tener muchas raciones de PHP en esta entrada. También manosearás un poquito el archivo `functions.php`.
 
@@ -283,5 +281,3 @@ Preparado para dar tu primeros pasos en la creación de temas WordPress? Léelo 
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper WordPress Theme Tutorial: 2nd Edition](http://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

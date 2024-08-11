@@ -11,9 +11,7 @@ tags:
   - API Blueprint
 ---
 
-<!--kg-card-begin: markdown-->
-
-_**Note:** This is the **5th post** of a series of post about **Building APIs With Express**. Based on my last post about [**Documenting your API with API Blueprint**](/2017/08/documenting-your-api-with-api-blueprint/) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/04)._
+_**Note:** This is the **5th post** of a series of post about **Building APIs With Express**. Based on my last post about [**Documenting your API with API Blueprint**](/2017/08/documenting-your-api-with-api-blueprint) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/04)._
 
 So last time I documented the Another TODO API using [API Blueprint](https://apiblueprint.org/) and now I'm going to take advantage of that to have some **test against the API to ensure documentation is up to date with the actual API code**. For this task, I'm going to be using [Dredd](https://github.com/apiaryio/dredd).
 
@@ -327,5 +325,3 @@ Dredd is a good tool to **maintain your API Doc updated and make [DDD (Documenta
 Anyway, you can check the [generated code on GitHub](https://github.com/AlbertoFdzM/another-todo-api/tree/post/05).
 
 Happy coding :heart:!
-
-<!--kg-card-end: markdown-->

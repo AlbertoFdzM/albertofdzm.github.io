@@ -10,8 +10,6 @@ tags:
   - curl
 ---
 
-<!--kg-card-begin: markdown-->
-
 _**Note:** This is the 2nd post of a series of post about **Building APIs With Express**._
 
 Based on my last post about [Making APIs with Node and Express](/2016/12/making-apis-with-node-and-express) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/01).
@@ -382,5 +380,3 @@ I think there's no much to explain here, is pretty much the same as the `DELETE`
 Well, I think that with this the awesome Another TODO API is completely functional, maybe I should care about that **the info isn't being stored anywhere and every time the server stops I lose it all**, but that'll be another time!
 
 Comment and [check the code on GitHub](https://github.com/AlbertoFdzM/another-todo-api/tree/post/02)!
-
-<!--kg-card-end: markdown-->

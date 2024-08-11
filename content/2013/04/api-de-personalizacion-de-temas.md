@@ -8,8 +8,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 En este articulo articulado te voy a enseñar la magia de utilizar la API para la personalización de temas en WordPress, ¿Qué qué es? serás tarugo… Bueno, se trata de un conjunto de código que nos permite meter mano a la pantalla de personalización de temas, te enseño una imagen para sacarte de dudas:
 
 ![Customization Panel](/old-posts-images/2013/04/Customization-Panel.jpg)
@@ -142,5 +140,3 @@ add_action( 'wp_head', 'test_customize_css');
 Ahora el color del texto en nuestra web debería cambiar dependiendo del color que elijamos en el panel de personalización.
 
 ¿Te ha gustado? ¿No te funciona? ¿Tienes dudas? ¿Sufres estreñimiento ocasional?!?!?! No dudes en comentarlo.
-
-<!--kg-card-end: markdown-->

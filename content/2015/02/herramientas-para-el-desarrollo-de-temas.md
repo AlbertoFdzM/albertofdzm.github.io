@@ -7,8 +7,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 Antes de empezar a desarrollar ningún tema WordPress, vamos a necesitar de un lugar dónde tener nuestras herramientas de desarrollo de temas. En este artículo, recorreremos los mejores trucos y configuraciones y montaremos un entorno de testeo de Temas WordPress multiplataforma que hará que un auténtico desarrollador de Temas WordPress se sienta orgulloso.
 
 ## Servidor Local de Testeo: XAMPP, MAMP, WAMP
@@ -108,5 +106,3 @@ Aunque no creo que sea estrictamente necesario que sepas **PHP**, si es muy reco
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper WordPress Theme Tutorial: 2nd Edition](http://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

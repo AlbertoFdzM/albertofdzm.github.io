@@ -1,15 +1,13 @@
 ---
 title: Making APIs with Node and Express
 date: 2016-12-11
-lastmod: 2016-12-17
+lastmod: 2024-08-11
 tags:
   - NodeJS
   - ExpressJS
   - API
   - JavaScript
 ---
-
-<!--kg-card-begin: markdown-->
 
 I'm going to make a simple API with [Node](https://nodejs.org/en/) and [Express](http://expressjs.com/), specifically an API for a TODOs app.
 
@@ -167,9 +165,9 @@ npm start
 
 By default this little guy should be listening on the port `3000` of my computer. If I access with some browser to [`http://localhost:3000`](http://localhost:3000) I'll receive a sad `Cannot GET /`.
 
-## [Express Router](http://expressjs.com/en/4x/api.html#router)
+## Express Router
 
-Time to make this guy have some voice to being able to reply me when I ask for something. For that I'll use the Express Routers to build up my TODO API pieces.
+Time to make this guy have some voice to being able to reply me when I ask for something. For that I'll use the [Express Routers](http://expressjs.com/en/4x/api.html#router) to build up my TODO API pieces.
 
 ### `src/v1/index.js`
 
@@ -210,9 +208,9 @@ This would work just fine! If I visit [`http://localhost:3000/v1`](http://localh
 { "message": "Let's TODO!" }
 ```
 
-## [Middlewares](http://expressjs.com/en/guide/using-middleware.html)
+## Middlewares
 
-Now I'm going to add some middleware to avoid contact with Systems that doesn't support JSON format.
+Now I'm going to add some [middleware](http://expressjs.com/en/guide/using-middleware.html) to avoid contact with Systems that doesn't support JSON format.
 
 ### `src/index.js`
 
@@ -261,9 +259,9 @@ _**Note:** If I try it without the `--header "Accept: text"` it will reply my wi
 
 Mind your language young man! It's answering me in `HTML` I need to parse that reply passing it through a Error Handler .
 
-## [ErrorHandler](http://expressjs.com/en/guide/error-handling.html)
+## ErrorHandler
 
-Now that my app has errors (in the good meaning) I need a ErrorHandler on my app.
+Now that my app has errors (in the good meaning) I need a [ErrorHandler](http://expressjs.com/en/guide/error-handling.html) on my app.
 
 ### `src/index.js`
 
@@ -404,9 +402,9 @@ _**Note:** If nothing happens is because there's no errors, you can try to repro
 
 There are several plugins for linting the code _on the fly_ in the text editor, so by this way you don't need to run the linting npm script. In my case I use [Atom](https://atom.io/) with [linter](https://atom.io/packages/linter) and [linter-eslint](https://atom.io/packages/linter-eslint) packages.
 
-### [Editorconfig](http://editorconfig.org/)
+### EditorConfig
 
-This is a very important tool, it avoids a lot of noise between commits on git or git diffs. Also it helps to keep the code format homogeneous among the project.
+[EditorConfig](http://editorconfig.org/) is a very important tool, it avoids a lot of noise between commits on git or git diffs. Also it helps to keep the code format homogeneous among the project.
 
 #### `.editorconfig`
 
@@ -429,9 +427,9 @@ trim_trailing_whitespace = false
 
 As for the linting there is also plugins available for the usuals text editors. In the case of Atom there is the [editorconfig](https://atom.io/packages/editorconfig) package.
 
-### [Yarn](https://yarnpkg.com/)
+### Yarn
 
-Not long ago Yarn, a new dependency manager, got released and it's fully compatible with npm. Only needs to be installed and then just:
+Not long ago [Yarn](https://yarnpkg.com/), a new dependency manager, got released and it's fully compatible with npm. Only needs to be installed and then just:
 
 ```bash
 yarn
@@ -452,5 +450,3 @@ From here I can start using Yarn instead NPM for dependencies and NPM scripts.
 This post is long enough to bore you so I'm going to stop here. Later!
 
 Oh! Yes... you can check this code on the [another-todo-api GitHub repo](https://github.com/AlbertoFdzM/another-todo-api/tree/post/01).
-
-<!--kg-card-end: markdown-->

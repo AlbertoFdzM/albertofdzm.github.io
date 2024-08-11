@@ -1,7 +1,7 @@
 ---
 title: Mongoose, MongoDB and Express
 date: 2017-01-05
-lastmod: 2017-11-15
+lastmod: 2024-08-11
 tags:
   - ExpressJS
   - NodeJS
@@ -11,11 +11,9 @@ tags:
   - Mongoose
 ---
 
-<!--kg-card-begin: markdown-->
-
 First steps on ExpressJS API development to connect to a MongoDB database and start managing data using endpoints.
 
-_**Note:** This is the 3rd post of a series of post about **Building APIs With Express**. Based on my last post about [API Routing with Express](/2016/12/api-routing-with-express/) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/02)._
+_**Note:** This is the 3rd post of a series of post about **Building APIs With Express**. Based on my last post about [API Routing with Express](/2016/12/api-routing-with-express) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/02)._
 
 Last time, the awesome TODO API was with a nice API Routing hierarchy, but! And this is an important but. I didn't store any kind of data for future use, it's only storing the TODOs in temporal memory so once the server stops all the info is lost.
 
@@ -111,7 +109,7 @@ db.connect()
 
 Now it's time to define the first mongoose model, at this moment the only model or **relevant data to store in DB** are my tasks so so I only going to need the model.
 
-I'm going to use the same [**data structure** that I used in my last post](/2016/12/api-routing-with-express/).
+I'm going to use the same [**data structure** that I used in my last post](/2016/12/api-routing-with-express).
 
 ### `src/models/task.js`
 
@@ -409,5 +407,3 @@ If the server stops and starts again the tasks still there, mission accomplished
 _**Note:** I recommend to use [Postman](https://www.getpostman.com/) to test the API instead of cURL._
 
 That all I think. You can [check the code on GitHub](https://github.com/AlbertoFdzM/another-todo-api/tree/post/03).
-
-<!--kg-card-end: markdown-->

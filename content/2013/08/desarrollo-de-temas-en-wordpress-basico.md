@@ -1,13 +1,11 @@
 ---
 title: Desarrollo de Temas en WordPress - Básico
 date: 2013-08-27
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - Temas WordPress
   - WordPress
 ---
-
-<!--kg-card-begin: markdown-->
 
 En esta página encontrarás los primeros pasos necesarios para comenzar a **desarrollar temas de WordPress**. Indicar que se intentará seguir en todo momento los **[standars establecidos](http://make.wordpress.org/core/handbook/coding-standards/ "Standars de desarrollo para WordPress") en el manual de WordPress para le desarrollo de temas**.
 
@@ -52,5 +50,3 @@ Muy simple verdad, bien, pues si la carpeta **aprendewordpress** la posicionas 
 Dicho tema aparecerá para ser utilizado en tu WordPress, claro que en este caso, al no contener nada, lo único que hará será sobrescribir los estilos del tema Twenty Thirteen y establecer los suyos, que es lo mismo que dejar tu página sin estilos. A parte de esto también heredará las funcionalidades del tema Twenty Thierteen, como sus plantillas de páginas, estructuras, menús, etc.
 
 Espero que esta sencilla explicación de como empezar a crear temas (temas hijo) para WordPress te haya resultado útil. ¿Dudas? Comenta sin miedo.
-
-<!--kg-card-end: markdown-->

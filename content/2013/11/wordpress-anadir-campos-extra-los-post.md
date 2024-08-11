@@ -8,8 +8,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 Siempre es útil añadir información adicional a un post o a una página en WordPress para añadir funcionalidades nuevas a nuestras entradas o contenido, cómo por ejemplo, añadir el enlace / URL de la fuente de un articulo del que hemos obtenido dicha información. Esto lo conseguimos gracias a la función [`add_meta_box`](http://codex.wordpress.org/Function_Reference/add_meta_box "WordPress Codex - add_meta_box()").
 
 ## `add_meta_box()`
@@ -174,5 +172,3 @@ Y tachán! Ya estaremos imprimiendo el link a la fuente de nuestro contenido si 
 ![Ejemplo metadato extra WP](/old-posts-images/2013/10/ejemplo_metadato_extra_wp.png)
 
 Espero que os haya resultado interesante y útil. No dudéis en comentar!
-
-<!--kg-card-end: markdown-->

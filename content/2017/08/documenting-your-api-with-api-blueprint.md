@@ -1,7 +1,7 @@
 ---
 title: Documenting your API with API Blueprint
 date: 2017-08-25
-lastmod: 2017-11-20
+lastmod: 2024-08-11
 tags:
   - ExpressJS
   - NodeJS
@@ -11,11 +11,9 @@ tags:
   - Apiary
 ---
 
-<!--kg-card-begin: markdown-->
-
 This article covers **how to document an API REST using API Blueprint** standard providing API usage info to future clients. It can also be helpful to design the structure of future API endpoints before start its development.
 
-_**Note:** This is the 4th post of a series of post about **Building APIs With Express**. Based on my last post about [**Mongoose, MongoDB and Express**](/2017/01/mongoose-mongodb-and-express/) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/03)._
+_**Note:** This is the 4th post of a series of post about **Building APIs With Express**. Based on my last post about [**Mongoose, MongoDB and Express**](/2017/01/mongoose-mongodb-and-express) I'll continue developing over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/03)._
 
 OMG, a lot of time has passed since my last commit and now when I look at the API there are some endpoints that I don't remember very well since the last time I developed them. Let's fix it now that I understand most of it by **documenting the API using [API Blueprint syntax](https://apiblueprint.org/)**.
 
@@ -202,5 +200,3 @@ Here in the `Response` definition, I have used my `Attributes` data structure.
 I think I've covered all the basic cases by now, you can read this [Advanced Tutorial about API Blueprint](https://apiblueprint.org/documentation/advanced-tutorial.html) and define a much more robust API.
 
 As always you can [check the code on GitHub](https://github.com/AlbertoFdzM/another-todo-api/tree/post/04) and you can review the [Another TODO API docs in Apiary](http://docs.anothertodo.apiary.io/)
-
-<!--kg-card-end: markdown-->

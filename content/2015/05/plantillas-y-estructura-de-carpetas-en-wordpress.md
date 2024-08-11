@@ -7,8 +7,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 **El tema más minimalista de WordPress** simplemente necesitaría los archivos `index.php` y `style.css` (o simplemente el style si de un tema hijo se tratara) pero tranquilo, no te vas a quedar sólo con el solar y el felpudo, vas a abordar muchos más archivos que te permitan aprovechar al máximo el potencial de WordPress.\
 ![Estructura de Directorios y Archivos en WordPress](/old-posts-images/2015/05/05-Estructura_De_Directorios_Y_Ficheros.png)
 
@@ -159,5 +157,3 @@ Este es el camino para empezar a hacer temas a punta pala.
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper Wororial: 2nd Edition](https://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

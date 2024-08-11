@@ -1,17 +1,14 @@
 ---
-title: Build an App with Electron and TypeScript - Managing Windows and Navigation
-description: This article is part of a post series about developing apps with Electron and TypeScript and covers how to handle windows and manage navigation when developing an Electron app.
-date: 1970-01-01
-lastmod: 2019-12-17
+title: Electron and TypeScript - Windows and Navigation
+description: This post covers how to handle windows and manage navigation when developing an Electron app.
+date: 2019-11-20
+lastmod: 2024-08-11
 tags:
   - NodeJS
   - TypeScript
   - Electron
 draft: true
-excerpt: This article is part of a post series about developing apps with Electron and TypeScript and covers how to handle windows and manage navigation when developing an Electron app.
 ---
-
-<!--kg-card-begin: markdown-->
 
 This article is part of a [post series about developing apps with Electron and TypeScript](https://github.com/AlbertoFdzM/time-tracker) and covers **how to handle windows and manage navigation when developing an Electron app**.
 
@@ -31,7 +28,7 @@ class App {
   public start(): void {
     // ...
 
-    Electron.app.on('window-all-closed', this.onWindowAllClosed.bind(this));
+    Electron.app.on("window-all-closed", this.onWindowAllClosed.bind(this));
   }
 
   // ...
@@ -45,7 +42,7 @@ class App {
    * https://nodejs.org/docs/latest-v12.x/api/process.html#process_process_platform
    */
   private onWindowAllClosed(): void {
-    if (process.platform !== 'darwin') {
+    if (process.platform !== "darwin") {
       Electron.app.quit();
     }
   }
@@ -71,13 +68,13 @@ class App {
   private async onReady(): Promise<void> {
     const options: Electron.BrowserWindowConstructorOptions = {
       webPreferences: {
-        nodeIntegration: true
-      }
+        nodeIntegration: true,
+      },
     };
 
     this.mainWindow = new Electron.BrowserWindow(options);
 
-    await this.mainWindow.loadFile(path.join(__dirname, '../index.html'));
+    await this.mainWindow.loadFile(path.join(__dirname, "../index.html"));
   }
 
   // ...
@@ -99,9 +96,9 @@ class App {
 
     this.mainWindow = new Electron.BrowserWindow(options);
 
-    this.mainWindow.on('closed', this.onMainWindowClosed.bind(this));
+    this.mainWindow.on("closed", this.onMainWindowClosed.bind(this));
 
-    await this.mainWindow.loadFile(path.join(__dirname, '../index.html'));
+    await this.mainWindow.loadFile(path.join(__dirname, "../index.html"));
   }
 
   // ...
@@ -133,22 +130,21 @@ class App {
 
   // ...
 
-
   /**
    * Opens app's main window
    */
   private async openMainWindow(): Promise<void> {
     const options: Electron.BrowserWindowConstructorOptions = {
       webPreferences: {
-        nodeIntegration: true
-      }
+        nodeIntegration: true,
+      },
     };
 
     this.mainWindow = new Electron.BrowserWindow(options);
 
-    this.mainWindow.on('closed', this.onMainWindowClosed.bind(this));
+    this.mainWindow.on("closed", this.onMainWindowClosed.bind(this));
 
-    await this.mainWindow.loadFile(path.join(__dirname, '../index.html'));
+    await this.mainWindow.loadFile(path.join(__dirname, "../index.html"));
   }
 }
 ```
@@ -165,7 +161,7 @@ class App {
   public start(): void {
     // ...
 
-    Electron.app.on('activate', this.onActivate.bind(this));
+    Electron.app.on("activate", this.onActivate.bind(this));
   }
 
   // ...
@@ -185,6 +181,3 @@ class App {
 ```
 
 With this changes applied, next time the app starts, it will be able to close its window and reopen it without quitting when running on MacOS.
-
-<!--kg-card-end: markdown-->
-

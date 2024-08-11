@@ -1,17 +1,14 @@
 ---
-title: Build an App with Electron and TypeScript - Getting Started
-description: This article covers how to start a project to develop with Electron and TypeScript, first steps with Electron apps and how to debug an Electron app. This is part of a post series about developing apps with Electron and TypeScript.
-date: 1970-01-01
-lastmod: 2019-12-17
+title: Electron and TypeScript - Getting Started
+description: This pot covers how to start a developing with Electron and TypeScript, first steps and app debugging.
+date: 2019-11-20
+lastmod: 2024-08-11
 tags:
   - NodeJS
   - TypeScript
   - Electron
 draft: true
-excerpt: This article covers how to start a project to develop with Electron and TypeScript, first steps with Electron apps and how to debug an Electron app. This is part of a post series about developing apps with Electron and TypeScript.
 ---
-
-<!--kg-card-begin: markdown-->
 
 This article covers how to start a project to develop with Electron and TypeScript, first steps with Electron apps and how to debug an Electron app. This is part of a [post series about developing apps with Electron and TypeScript](https://github.com/AlbertoFdzM/time-tracker).
 
@@ -142,7 +139,7 @@ npm start
 ```
 
 An empty window should appear:\
-![Blank TypeScript and Electron App Running](./img/01-blank-typescript-electron-app-running.png)
+![Blank TypeScript and Electron App Running](/old-posts-images/2019/11/01-blank-typescript-electron-app-running.png)
 
 ### Rendering HTML in Electron
 
@@ -195,7 +192,7 @@ npm start
 ```
 
 Should appear something like this:\
-![TypeScript and Electron App with Hello World](./img/02-typescript-electron-app-with-hello-world.png)
+![TypeScript and Electron App with Hello World](/old-posts-images/2019/11/02-typescript-electron-app-with-hello-world.png)
 
 In order to have integration with Node APIs, Electron's window needs to receive some options.
 
@@ -255,7 +252,7 @@ Update `index.html` file
 ```
 
 When App starts:\
-![Electron App with NodeJS integration](./img/03-electron-app-with-node-integration.png)
+![Electron App with NodeJS integration](/old-posts-images/2019/11/03-electron-app-with-node-integration.png)
 
 ## Debugging and AppConfig
 
@@ -343,7 +340,7 @@ Now the `start` script needs to receive this value through environment variables
 ```
 
 When `electron-debug` is activated will detect `devtron` and activates it too. Now when the Electron app starts, it will have the devtools panel open and a "Devtron" tab in it:\
-![Electron App with devtools open using Devtron](./img/04-electron-app-with-devtools-open-using-devtron.png)
+![Electron App with devtools open using Devtron](/old-posts-images/2019/11/04-electron-app-with-devtools-open-using-devtron.png)
 
 ### Debugging Electron in TypeScript with VS Code
 
@@ -408,5 +405,3 @@ When pressing `F5` the Electron app should start with inspection mode, and debug
 This are the basic steps to start developing with Electron with TypeScript.
 
 All the generated code of this post can be found on [GitHub AlbertoFdzM/time-tracker repository](https://github.com/AlbertoFdzM/time-tracker/tree/post/01).
-
-<!--kg-card-end: markdown-->

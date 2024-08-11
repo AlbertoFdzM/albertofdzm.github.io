@@ -1,13 +1,11 @@
 ---
 title: Learn Cordova!
 date: 2016-01-18
-lastmod: 2016-01-18
+lastmod: 2024-08-11
 tags:
   - cordova
   - mobile
 ---
-
-<!--kg-card-begin: markdown-->
 
 Just a little try to cordova
 
@@ -232,5 +230,3 @@ I think that this is enought for a little taste of Cordova and for a sample repo
 You can checkout the code on [the repo](https://github.com/AlbertoFdzM/learn-cordova)! :smile:
 
 See you! Happy Coding! :beer:
-
-<!--kg-card-end: markdown-->

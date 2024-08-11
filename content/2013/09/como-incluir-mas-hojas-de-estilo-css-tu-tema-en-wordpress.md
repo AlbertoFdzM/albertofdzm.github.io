@@ -1,13 +1,11 @@
 ---
 title: Cómo Incluir Más Hojas de Estilo CSS a Tu Tema en WordPress
 date: 2013-09-09
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - Temas WordPress
   - WordPress
 ---
-
-<!--kg-card-begin: markdown-->
 
 Pues no hay mucho que decir que el titulo de este artículo no te haya dicho ya. Voy a explicarte cómo podemos añadir nuestras hojas de estilo a nuestro tema en WordPress y te mostrare un par de ejemplos para que lo entiendas.
 
@@ -76,5 +74,3 @@ add_action('wp_enqueue_scripts', 'test_mis_estilos');
 ```
 
 No es muy complicado verdad. Esto es una forma fácil de añadir estilos a nuestro tema o de trabajar con ellos en plugins. Te aconsejo que experimentes con estás funciones para variar en que posición se muestra cada hoja de estilos y bueno, si tienes cualquier duda, comenta, es gratis!
-
-<!--kg-card-end: markdown-->

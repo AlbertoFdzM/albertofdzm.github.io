@@ -7,8 +7,6 @@ tags:
   - NodeJS
 ---
 
-<!--kg-card-begin: markdown-->
-
 ![GulpJS Logo](/old-posts-images/2015/04/gulp.png)
 
 En otro momento ya hablé sobre las [utilidades que tiene NodeJS en el desarrollo FrontEnd](/2015/03/desarrollo-web-con-node-basiquisimo) abordando lo más básico, hoy vas a leer acerca de una **herramienta** que te va a facilitar la vida en lo que se refiere a desarrollo web. Esta utilidad es [**Gulp**](http://gulpjs.com/).
@@ -173,5 +171,3 @@ gulp.task("beautify", function () {
 Y si ahora ejecutas `gulp beautify` en el raíz del proyecto verás el archivo `learn-gulp.css`, y si lo abres podrás comprobar que tiene bastantes lineas.
 
 Esto es **lo básico de Gulp**, seguro que puedes hacer cosas muchísimo más alucinantes a partir de aquí.
-
-<!--kg-card-end: markdown-->

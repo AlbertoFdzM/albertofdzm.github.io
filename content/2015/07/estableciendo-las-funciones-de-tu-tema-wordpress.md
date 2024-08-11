@@ -7,8 +7,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 Ahora que ya has establecido la estructura de ficheros, ahora toca llenarlos de código!
 
 Primero, vas a añadir un par de funciones PHP a nuestro tema. Estas funciones te van a servir para varias cosas:
@@ -262,5 +260,3 @@ Madre! Que tupa a desarrollar. Espero que te haya gustado!
 Es posible que alguno de los enlaces no funcione debido a que el artículo aún no haya sido escrito. No pares de visitar esta página para enterarte de sus actualizaciones.
 
 _**Nota:** Tanto este como los demás artículos del tutorial se han elaborado con la referencia de: [The ThemeShaper WordPress Theme Tutorial: 2nd Edition](http://themeshaper.com/2012/10/22/the-themeshaper-wordpress-theme-tutorial-2nd-edition/) propiedad de [AUTOMATTIC](http://automattic.com/)._
-
-<!--kg-card-end: markdown-->

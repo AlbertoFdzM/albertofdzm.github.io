@@ -1,12 +1,10 @@
 ---
 title: "Let's Make a Blog With Polymer: 01"
 date: 2016-10-17
-lastmod: 2017-04-08
+lastmod: 2024-08-11
 tags:
   - polymer
 ---
-
-<!--kg-card-begin: markdown-->
 
 Hey, if I'm up to date with the latest web technologies I should have heard of Polymer and the new HTML technology of **web components**. So here I'm about to start the development of a **blog platform made with Polymer**.
 
@@ -28,7 +26,7 @@ After this amount of info boiling in my head I should be ready to start thinking
 
 ## Where Do I Start?
 
-First things firsts, to make [the set up](https://www.polymer-project.org/1.0/start/toolbox/set-up) I need **[NodeJS](nodejs.org)** installed in my system and the **[polymer-cli](https://www.npmjs.com/package/polymer-cli)** package:
+First things firsts, to make [the set up](https://www.polymer-project.org/1.0/start/toolbox/set-up) I need **[NodeJS](https://nodejs.org)** installed in my system and the **[polymer-cli](https://www.npmjs.com/package/polymer-cli)** package:
 
 ```bash
 npm i -g polymer-cli
@@ -263,5 +261,3 @@ Yay! Let's put it on my posts element page `my-post-view.html`:
 ```
 
 Woah that's enough for now I think, I'll continue later. See you!
-
-<!--kg-card-end: markdown-->

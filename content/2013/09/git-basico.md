@@ -1,12 +1,10 @@
 ---
 title: Git - Básico
 date: 2013-09-23
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - Git
 ---
-
-<!--kg-card-begin: markdown-->
 
 Voy a empezar a relatar con este articulo el uso de un [sistema de control de versiones](http://es.wikipedia.org/wiki/Programas_para_control_de_versiones "Wiki: Sistemas de Control de Versiones") (CVS/SCV) muy conocido por los desarrolladores web, ese sistema tiene el nombre de [Git](http://git-scm.com/ "Web de Git"). Para empezar diremos que este sistema se utiliza por **linea de comandos** y aunque ya se han desarrollado muchos programas que facilitan una interfaz gráfica para su uso, estos programas siguen usan esta linea de comandos internamente. Por lo que lo que más te conviene tanto a ti como a mi es saber que hacen esos programas o cómo realizar esas acciones sin necesidad de interfaz gráfica, y de este modo, **entender como funciona Git**.
 
@@ -22,7 +20,7 @@ Creo que una de las formas más sencillas de aprender es ir trabajando a medida 
 
 Lo primero de todo, como es lógico, es que instales el **cliente Git** para poder utilizarlo. Lo puedes bajar fácilmente [aquí](http://git-scm.com/ "Página de Git").
 
-Durante la instalación nos preguntará varias cosas como si queremos añadirlo al *Path* o que tipo de *cliente SSH* querremos usar, te aconsejo que elijas las recomendadas y que añadas Git al path para poder usarlo en linea de comandos (*cmd*) sin tener que hacer referencia a su ruta. Una vez instalado, podrás comprobar esto ultimo que he dicho abriendo una consola de comandos (`Windows` **+** `R`, escribir `cmd` y pulsar `Intro`) y escribiendo lo siguiente:
+Durante la instalación nos preguntará varias cosas como si queremos añadirlo al _Path_ o que tipo de _cliente SSH_ querremos usar, te aconsejo que elijas las recomendadas y que añadas Git al path para poder usarlo en linea de comandos (_cmd_) sin tener que hacer referencia a su ruta. Una vez instalado, podrás comprobar esto ultimo que he dicho abriendo una consola de comandos (`Windows` **+** `R`, escribir `cmd` y pulsar `Intro`) y escribiendo lo siguiente:
 
 `git --version`
 
@@ -48,7 +46,7 @@ cd aprendegit
 git init
 ```
 
-A continuación deberíamos ver un mensaje indicando que se ha inicializado nuestro repositorio en el directorio en el que nos encontramos creándose una carpeta llamada *.git*, está carpeta contendrá toda la información que Git necesita para hacer un seguimiento de nuestro proyecto. Bien, ahora que ya tenemos nuestro repositorio funcionando vamos a ver si tenemos algún cambio con el comando `git status`:
+A continuación deberíamos ver un mensaje indicando que se ha inicializado nuestro repositorio en el directorio en el que nos encontramos creándose una carpeta llamada _.git_, está carpeta contendrá toda la información que Git necesita para hacer un seguimiento de nuestro proyecto. Bien, ahora que ya tenemos nuestro repositorio funcionando vamos a ver si tenemos algún cambio con el comando `git status`:
 
 ```bash
 # Comrpobamos si se han efectuado cambios en nuestro repositorio
@@ -65,7 +63,7 @@ Lo más seguro es que nos devuelva la siguiente respuesta:
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-Aquí tenemos un poquito de información sobre nuestro repositorio si te fijas nos está indicando la **rama** en la que estamos actualmente `# On branch master`, por defecto, cuando Git da de alta un nuevo repositorio, siempre crea una **rama principal** llamada *master*, digamos que este sería el tronco central de nuestro árbol o futuro árbol de versiones.
+Aquí tenemos un poquito de información sobre nuestro repositorio si te fijas nos está indicando la **rama** en la que estamos actualmente `# On branch master`, por defecto, cuando Git da de alta un nuevo repositorio, siempre crea una **rama principal** llamada _master_, digamos que este sería el tronco central de nuestro árbol o futuro árbol de versiones.
 
 También nos informa del **commit** (punto de versionado) en el que nos encontramos `# Initial commit`, en este caso, en el primer commit.
 
@@ -73,7 +71,7 @@ Despues de esta info lo que tenemos es un mensaje indicando los cambios que se h
 
 ### Tu primer commit
 
-Vamos a crear el archivo *index.html* en nuestra carpeta del proyecto *aprendegit*:
+Vamos a crear el archivo _index.html_ en nuestra carpeta del proyecto _aprendegit_:
 
 `<p>Hola Mundo</p>`
 
@@ -122,11 +120,10 @@ git commit -m "Mi primer commit"
 
 Si te das cuenta hemos incluido un mensaje informativo junto con la instantánea que acabamos de registrar con el parámetro `-m "mensaje"`, de este modo podremos explicar o hacer referencia a los cambios efectuados en esa instantánea.
 
-Si ahora volvermos a editar *index.html*:
+Si ahora volvermos a editar _index.html_:
 
 ```html
-Hola Mundo
-Adios Mundo
+Hola Mundo Adios Mundo
 ```
 
 Y comprobamos los cambios de nuestro repositorio:
@@ -155,6 +152,3 @@ git commit -m "Mi segundo commit"
 ```
 
 Y ya habremos realizado nuestra segunda instantánea en nuestro repositorio.
-
-<!--kg-card-end: markdown-->
-

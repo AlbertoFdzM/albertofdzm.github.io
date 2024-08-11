@@ -6,13 +6,11 @@ tags:
   - Git
 ---
 
-<!--kg-card-begin: markdown-->
-
 Una de las cualidades principales de los sistemas de control de versiones es la **gestión del código en ramas** permitiendo modificaciones del código en paralelo. En concreto vamos a abordar la gestión de ramas o, como se las llama generalmente, _braches_ en Git. Empecemos!
 
 ## Dividiendonos en ramas (branch)
 
-Ya hemos visto **[cómo commitar](/2013/09/git-basico/ "Git – Básico")** (Realizar un `commit`) nuestros cambios al repositorio para que queden registrados en el timeline. Ahora supongamos que tenemos un código medianamente decente que podamos liberar para su uso en _producción_, lo lógico sería que los futuros commits que vayamos a realizar no los realicemos directamente sobre ese código estable ya podría resultar perjudicial para la estabilidad de nuestro proyecto. Por ello, podemos crear **ramas** en las que seguir haciendo que nuestro proyecto crezca sin comprometer a las partes estables ya desarrolladas.
+Ya hemos visto **[cómo commitar](/2013/09/git-basico "Git – Básico")** (Realizar un `commit`) nuestros cambios al repositorio para que queden registrados en el timeline. Ahora supongamos que tenemos un código medianamente decente que podamos liberar para su uso en _producción_, lo lógico sería que los futuros commits que vayamos a realizar no los realicemos directamente sobre ese código estable ya podría resultar perjudicial para la estabilidad de nuestro proyecto. Por ello, podemos crear **ramas** en las que seguir haciendo que nuestro proyecto crezca sin comprometer a las partes estables ya desarrolladas.
 
 Por defecto, Git, llama a la rama principal _master_, está rama tiende a usarse sólo para albergar código estable, por otro lado se suele establecer una rama extra, llamada _develop_ en la que se va implementando el código hasta que tengamos un software estable.
 
@@ -143,5 +141,3 @@ Y así quedaría la imagen de nuestro repositorio:\
 ![ejemplo Git conflictos resueltos](/old-posts-images/2013/09/ejemplo_Git_conflictos_resueltos.png)
 
 Hasta aquí la teoría básica sobre el **uso de ramas en Git**. No dudéis en comentar.
-
-<!--kg-card-end: markdown-->

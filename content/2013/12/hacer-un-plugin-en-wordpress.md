@@ -6,8 +6,6 @@ tags:
   - WordPress
 ---
 
-<!--kg-card-begin: markdown-->
-
 Me he topado con el problema de tener que **añadir una funcionalidad a WordPress sin poder editar el tema** que este tenia, y en estos casos viene muy bien implementar esa funcionalidad mediante el **desarrollo de un Plugin en WordPress**. Antes de esto, mencionar que aunque un Plugin añada funcionalidades a nuestro WordPress también va a provocar que los tiempos de carga aumenten ya que estamos elevando la cantidad de archivos que nuestro WordPress debe cargar, así como las configuraciones, por lo que conviene aunar todas las funcionalidades que desarrollemos en un solo Plugin si no tenemos pensado usarlas de manera individualizada.
 
 Así pues podemos empezar con lo más básico para el desarrollo de Plugins en WordPress
@@ -45,5 +43,3 @@ Si este archivo PHP lo dejamos en la ruta de nuestro WordPress `wp-content/plugi
 Ahora bien, lo recomendable (muy recomendable) es que, en vez de situar directamente el archivo PHP de nuestro Plugin WordPress en el raíz de la carpeta _plugins_, lo coloquemos en una carpeta del mismo nombre que nuestro archivo PHP (_mi-plugin_ en este caso) para evitar que entre en conflicto con otros Plugins de WordPress y que además podamos agrupar todos los archivos que vaya a contener nuestro Plugin en una sola ubicación (Archivos JavaScript, CSS, HTML, PHP, imágenes, etc.).
 
 De aquí en adelante sólo te queda trastear con las diferentes funciones que tiene WordPress para empezar a desarrollar funcionalidades en tu nuevo Plugin.
-
-<!--kg-card-end: markdown-->

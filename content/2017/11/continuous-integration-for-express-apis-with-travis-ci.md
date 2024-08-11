@@ -9,11 +9,9 @@ tags:
   - TravisCI
 ---
 
-<!--kg-card-begin: markdown-->
-
 This article cover **how to use Travis CI service with NodeJS** for an open source project hosted on GitHub. At the end, you would be able to setup a basic build pipeline to automatically validate your code using **Continuous Integration (CI)**.
 
-_**Note:** This is the **6th post** of a series about **Building APIs With Express**. The code of this post will be developed over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/05) of the last post ([**Testing an API Against Documentation**](/2017/09/testing-an-api-against-documentation/))._
+_**Note:** This is the **6th post** of a series about **Building APIs With Express**. The code of this post will be developed over the [generated code](https://github.com/AlbertoFdzM/another-todo-api/tree/post/05) of the last post ([**Testing an API Against Documentation**](/2017/09/testing-an-api-against-documentation))._
 
 ## Travis CI
 
@@ -221,7 +219,7 @@ cache:
 
 ### THE Travis Status Badge
 
-[![Build Status](https://travis-ci.org/AlbertoFdzM/another-todo-api.svg?branch=master)](https://travis-ci.org/AlbertoFdzM/another-todo-api)
+[![Build Status](https://travis-ci.org/AlbertoFdzM/another-todo-api.svg?branch=master)](https://travis-ci.org/AlbertoFdzM/another-todo-api "Build badge")
 
 This is the only very thing why all of us integrate our projects with Travis. To be the fanciest on GitHub wearing a bunch of blue/green badges saying that everything is ok and all is up to date.
 
@@ -260,5 +258,3 @@ By this way, all the code to be modified in that branch has to pass through a PR
 Travis CI is perfect to ensure the sanity of your code and to maintain good practices against the project, it also helps to detect possible bugs caused by refactors or changes in the functionality of the project. But that's not all, with advanced builds you could make deploys to production servers or build a compiled version for the end-user.
 
 As always, the [generated code from this article is on GitHub](https://github.com/AlbertoFdzM/another-todo-api/tree/post/06).
-
-<!--kg-card-end: markdown-->

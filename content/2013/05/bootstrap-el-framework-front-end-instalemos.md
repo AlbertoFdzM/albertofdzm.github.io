@@ -1,12 +1,10 @@
 ---
 title: "Bootstrap: El Framework Front-End. Instalemos!"
 date: 2013-05-15
-lastmod: 2016-01-18
+lastmod: 2024-08-11
 tags:
   - BootStrap
 ---
-
-<!--kg-card-begin: markdown-->
 
 **Atención!!!** Este articulo es referente a versiones anteriores a Bootstrap v3.0.0, por lo que muchas de las clases y código mostrado en este artículo se encontrarán **obsoletos** si se utilizan las versiones v3.0.0 o posteriores. [Bootstrap](http://twitter.github.io/bootstrap/ "Bootstrap"), se trata de pocos archivos, sí, pero darán un empujón visual a tu página o aplicación web bestial. Así que a continuación te explicaré la sencilla forma de instalarla.
 
@@ -69,5 +67,3 @@ Y no hay más na! Poco tengo que explicar, en **index.html** iría nuestro códi
   </body>
 </html>
 ```
-
-<!--kg-card-end: markdown-->

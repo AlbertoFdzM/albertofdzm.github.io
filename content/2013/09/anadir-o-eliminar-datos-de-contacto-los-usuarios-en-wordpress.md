@@ -1,12 +1,10 @@
 ---
 title: Añadir o eliminar datos de contacto a los usuarios en WordPress
 date: 2013-09-30
-lastmod: 2016-01-11
+lastmod: 2024-08-11
 tags:
   - WordPress
 ---
-
-<!--kg-card-begin: markdown-->
 
 Los usuarios registrados en WordPress tienen la posibilidad de informar diferentes métodos de contacto en su página de perfil:
 
@@ -65,5 +63,3 @@ if ( is_singular() ) {
 ```
 
 Se pueden añadir nuevos campos que se utilizan bastante actualmente cómo por ejemplo la URL del perfil a Facebook, la URL de InfoJobs, el perfil de Google+, etc.
-
-<!--kg-card-end: markdown-->

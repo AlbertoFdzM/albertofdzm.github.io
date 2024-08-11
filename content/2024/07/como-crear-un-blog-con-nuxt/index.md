@@ -10,7 +10,7 @@ tags:
 type: default
 keywords:
   - nuxt
-lastmod: 2024-07-30
+lastmod: 2024-08-11
 image:
   src: ./nuxt-logo-green-white.png
   alt: Logo de Nuxt
@@ -229,7 +229,7 @@ Una vez realizados estos cambios, los usuarios podrán volver a la página princ
 
 Vamos a darle algo de vidilla a los artículos incluyendo alguna imagen. Para este ejemplo vamos a usar la siguiente imagen:
 
-[![Logo de Nuxt blanco y verde](nuxt-logo-green-white.png)](nuxt-logo-green-white.png)
+![Logo de Nuxt blanco y verde](./nuxt-logo-green-white.png)
 
 Vamos a en `/public/nuxt-logo-green-white.png`. Y a incluirlo en el post `/content/posts/2024/07/como-crear-un-blog-con-nuxt.md`:
 
@@ -468,13 +468,13 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-Una vez hagamos commit y subamos el código, GitHub arrancará una acción para desplegar nuestra página web. Si vuelves a la sección de configuración de GitHub Pages del repositorio podrás ver una sección que te permitirá acceder a la URL de tu blog. En mi caso se ha desplegado en https://albertofdzm.github.io/nuxt-blog/.
+Una vez hagamos commit y subamos el código, GitHub arrancará una acción para desplegar nuestra página web. Si vuelves a la sección de configuración de GitHub Pages del repositorio podrás ver una sección que te permitirá acceder a la URL de tu blog. En mi caso se ha desplegado en https://albertofdzm.github.io/nuxt-blog.
 
 GitHub Pages permite tener un dominio custom y multiples formas de configurar las páginas. Te recomiendo que revises la [documentación de GitHub Pages](https://docs.github.com/en/pages) para más información.
 
 ## Configurando Nuxt para Funcionar en Subdirectorios
 
-Al desplegar en `https://albertofdzm.github.io/nuxt-blog/`, necesitamos que Nuxt tenga en consideración la tura `/nuxt-blog/` para que imágenes, links y referencias a otros recursos funcionen adecuadamente. Para ello tenemos que cambiar la propiedad [`baseUrl`](https://nuxt.com/docs/api/nuxt-config#baseurl) en el fichero de `nuxt.config.ts`:
+Al desplegar en `https://albertofdzm.github.io/nuxt-blog`, necesitamos que Nuxt tenga en consideración la tura `/nuxt-blog/` para que imágenes, links y referencias a otros recursos funcionen adecuadamente. Para ello tenemos que cambiar la propiedad [`baseUrl`](https://nuxt.com/docs/api/nuxt-config#baseurl) en el fichero de `nuxt.config.ts`:
 
 ```diff
   // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -517,6 +517,6 @@ Y además, cambiar las URLs de las imágenes que añadimos a nuestro post:
 
 ## Cierre
 
-Una vez completados estos pasos tendremos un blog hecho con Nuxt y Tailwind funcionando. Puedes ver el que he creado de ejemplo en [https://albertofdzm.github.io/nuxt-blog/](https://albertofdzm.github.io/nuxt-blog/).
+Una vez completados estos pasos tendremos un blog hecho con Nuxt y Tailwind funcionando. Puedes ver el que he creado de ejemplo en [https://albertofdzm.github.io/nuxt-blog](https://albertofdzm.github.io/nuxt-blog).
 
 Aquí tienes el [repositorio de GitHub del proyecto](https://github.com/AlbertoFdzM/nuxt-blog).

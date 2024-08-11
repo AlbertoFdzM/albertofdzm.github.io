@@ -6,8 +6,6 @@ tags:
   - Google Analytics
 ---
 
-<!--kg-card-begin: markdown-->
-
 So here is what happened. I went to my analytics panel and I checked my monthly visits. What did I saw?
 
 ![Monthly Google Analytics Graph](/old-posts-images/2017/08/Monthly_Analytics.PNG)
@@ -89,5 +87,3 @@ _**Note:** Filters doesn't clean info of your metrics from the past, so they wil
 ## Keep it clean!
 
 That's all, now on it's up to you to improve it. You can read more on [Google Analytics Filter Documentation](https://support.google.com/analytics/topic/1032939)
-
-<!--kg-card-end: markdown-->

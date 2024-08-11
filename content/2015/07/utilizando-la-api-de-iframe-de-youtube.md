@@ -6,8 +6,6 @@ tags:
   - YouTube API
 ---
 
-<!--kg-card-begin: markdown-->
-
 **YouTube** provee una **API de IFrame** capaz de manejar los [`iframe`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) que se encargarán de desplegar los videos de YouTube que incrustes en tu web.
 
 Para aclarar todo antes de empezar, esta manera de trabajar con YouTube cambia de la tradicional de copia-pega, ya que aquí generamos un reproductor dinamicamente dentro de nuestra página lo que nos permite mucho más control y personalización sobre YouTube.
@@ -307,5 +305,3 @@ Aquí tienes una lista con los métodos a los que puedes acceder por medio del o
 `cueVideoById`, `loadVideoById`, `cueVideoByUrl`, `loadVideoByUrl`, `cuePlaylist`, `loadPlaylist`, `playVideo`, `pauseVideo`, `stopVideo`, `seekTo`, `clearVideo`, `nextVideo`, `previousVideo`, `playVideoAt`, `mute`, `unMute`, `setVolume`, `getVolume`, `setSize`, `getPlaybackRate`, `setPlaybackRate`, `getAvailablePlaybackRates`, `setLoop`, `setShuffle`, `getVideoLoadedFraction`, `getPlayerState`, `getCurrentTime`, `getVideoStartBytes`, `getVideoBytesLoaded`, `getVideoBytesTotal`, `getPlaybackQuality`, `setPlaybackQuality`, `getAvailableQualityLevels`, `getDuration`, `getVideoUrl`, `getVideoEmbedCode`, `getPlaylist`, `getPlaylistIndex`, `addEventListener`, `removeEventListener`, `getIframe`, `destroy`
 
 Puedes informarte mejor de todos estos métodos en la [web para desarrolladores de Google sobre la API de IFrame de YouTube](https://developers.google.com/youtube/iframe_api_reference?hl=es#Functions)
-
-<!--kg-card-end: markdown-->
