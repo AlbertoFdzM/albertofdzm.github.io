@@ -111,6 +111,8 @@ const totalPages = computed(() =>
 );
 const isSecondPage = computed(() => pageNumber.value === 2);
 const isLastPage = computed(() => pageNumber.value >= totalPages.value);
-const previousPagePath = isSecondPage ? "/" : `/${previousPageNumber}`;
-const nextPagePath = `/${nextPageNumber}`;
+const previousPagePath = computed(() =>
+  isSecondPage.value ? "/" : `/${previousPageNumber.value}`
+);
+const nextPagePath = computed(() => `/${nextPageNumber.value}`);
 </script>
