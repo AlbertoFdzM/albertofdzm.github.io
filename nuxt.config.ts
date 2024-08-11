@@ -89,4 +89,8 @@ export default defineNuxtConfig({
     description: "Only The Pixel es el blog de Alberto Fernández",
     defaultLocale: "es",
   },
+
+  typescript: {
+    typeCheck: false,
+  },
 });
