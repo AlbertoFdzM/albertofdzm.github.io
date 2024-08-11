@@ -23,6 +23,9 @@ const offset = pageSize * (pageNumber - 1);
 
 const { data: posts } = await useAsyncData("posts", () => {
   let query = queryContent()
+    .sort({
+      date: -1,
+    })
     .only([
       "date",
       "description",
