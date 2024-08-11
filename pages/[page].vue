@@ -23,31 +23,37 @@ const nextPageNumber = computed(() => pageNumber.value + 1);
 const previousPageNumber = computed(() => pageNumber.value - 1);
 const offset = computed(() => pageSize * (pageNumber.value - 1));
 
-const { data: posts } = await useAsyncData("posts", () => {
-  let query = queryContent<Post>()
-    .sort({
-      date: -1,
-    })
-    .limit(config.public.pageSize)
-    .skip(offset.value);
+const { data: posts } = await useAsyncData(
+  "posts",
+  () => {
+    let query = queryContent<Post>()
+      .sort({
+        date: -1,
+      })
+      .limit(config.public.pageSize)
+      .skip(offset.value);
 
-  if (!config.public.includeDrafts) {
-    query = query.where({
-      draft: {
-        $or: [
-          {
-            $eq: false,
-          },
-          {
-            $exists: false,
-          },
-        ],
-      },
-    });
+    if (!config.public.includeDrafts) {
+      query = query.where({
+        draft: {
+          $or: [
+            {
+              $eq: false,
+            },
+            {
+              $exists: false,
+            },
+          ],
+        },
+      });
+    }
+
+    return query.find();
+  },
+  {
+    watch: [offset],
   }
-
-  return query.find();
-});
+);
 
 const { data: totalPosts } = await useAsyncData("totalPosts", () => {
   let query = queryContent();
