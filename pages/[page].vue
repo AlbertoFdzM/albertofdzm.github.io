@@ -43,7 +43,16 @@ const { data: posts } = await useAsyncData("posts", () => {
 
   if (!config.public.includeDrafts) {
     query = query.where({
-      draft: false,
+      draft: {
+        $or: [
+          {
+            $eq: false,
+          },
+          {
+            $exists: false,
+          },
+        ],
+      },
     });
   }
 
@@ -55,7 +64,16 @@ const { data: totalPosts } = await useAsyncData("totalPosts", () => {
 
   if (!config.public.includeDrafts) {
     query = query.where({
-      draft: false,
+      draft: {
+        $or: [
+          {
+            $eq: false,
+          },
+          {
+            $exists: false,
+          },
+        ],
+      },
     });
   }
 
