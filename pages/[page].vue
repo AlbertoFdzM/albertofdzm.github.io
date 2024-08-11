@@ -23,7 +23,7 @@ const nextPageNumber = computed(() => pageNumber.value + 1);
 const previousPageNumber = computed(() => pageNumber.value - 1);
 const offset = computed(() => pageSize * (pageNumber.value - 1));
 
-const postsAsyncData = await useAsyncData("posts", () => {
+const { data: posts } = await useAsyncData("posts", () => {
   let query = queryContent<Post>()
     .sort({
       date: -1,
@@ -48,8 +48,6 @@ const postsAsyncData = await useAsyncData("posts", () => {
 
   return query.find();
 });
-
-const posts = postsAsyncData.data.value || [];
 
 const { data: totalPosts } = await useAsyncData("totalPosts", () => {
   let query = queryContent();

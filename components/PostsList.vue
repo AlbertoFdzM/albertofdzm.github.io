@@ -6,6 +6,6 @@
 import type Post from "~/models/Post";
 
 defineProps<{
-  posts: Post[];
+  posts: Post[] | null;
 }>();
 </script>
