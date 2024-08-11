@@ -12,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+import type Post from "~/models/Post";
+
 const config = useRuntimeConfig();
 const route = useRoute();
 
@@ -21,23 +23,11 @@ const nextPageNumber = pageNumber + 1;
 const previousPageNumber = pageNumber - 1;
 const offset = pageSize * (pageNumber - 1);
 
-const { data: posts } = await useAsyncData("posts", () => {
-  let query = queryContent()
+const postsAsyncData = await useAsyncData("posts", () => {
+  let query = queryContent<Post>()
     .sort({
       date: -1,
     })
-    .only([
-      "date",
-      "description",
-      "draft",
-      "_draft",
-      "_id",
-      "lastmod",
-      "_locale",
-      "_path",
-      "title",
-      "image",
-    ])
     .limit(config.public.pageSize)
     .skip(offset);
 
@@ -58,6 +48,8 @@ const { data: posts } = await useAsyncData("posts", () => {
 
   return query.find();
 });
+
+const posts = postsAsyncData.data.value || [];
 
 const { data: totalPosts } = await useAsyncData("totalPosts", () => {
   let query = queryContent();
