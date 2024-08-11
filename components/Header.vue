@@ -6,7 +6,7 @@
     <nav class="navbar bg-base-100 shadow-md shadow-black">
       <div class="navbar-start">
         <NuxtLink class="btn btn-ghost text-xl text-primary" to="/"
-          ><h1>AlbertoFdzM</h1></NuxtLink
+          ><h1>Only The Pixel</h1></NuxtLink
         >
       </div>
     </nav>
