@@ -72,6 +72,13 @@ export default defineNuxtConfig({
 
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      ignore: ["/2015/07/</span"],
+    },
+  },
+
   runtimeConfig: {
     public: {
       includeDrafts: false,
