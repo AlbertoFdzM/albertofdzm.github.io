@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   extends: ["node_modules/nuxt-content-assets/cache"],
 
   gtag: {
-    id: "",
+    id: "G-SMJGMW5J8V",
   },
 
   linkChecker: {
