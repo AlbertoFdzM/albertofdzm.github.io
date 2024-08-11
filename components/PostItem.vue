@@ -31,18 +31,10 @@
 
 <script lang="ts" setup>
 import { format } from "date-fns";
+import type Post from "~/models/Post";
 
 const { post } = defineProps<{
-  post: {
-    _path: string;
-    date?: string;
-    description: string;
-    image?: {
-      alt?: string;
-      src?: string;
-    };
-    title: string;
-  };
+  post: Post;
 }>();
 
 let description = post.description;

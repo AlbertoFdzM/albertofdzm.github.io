@@ -3,7 +3,9 @@
 </template>
 
 <script lang="ts" setup>
+import type Post from "~/models/Post";
+
 defineProps<{
-  posts: {}[];
+  posts: Post[];
 }>();
 </script>

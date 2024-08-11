@@ -8,25 +8,15 @@
 </template>
 
 <script setup lang="ts">
+import type Post from "~/models/Post";
+
 const config = useRuntimeConfig();
 
-const { data: posts } = await useAsyncData("posts", () => {
-  let query = queryContent()
+const postsAsyncData = await useAsyncData("posts", () => {
+  let query = queryContent<Post>()
     .sort({
       date: -1,
     })
-    .only([
-      "date",
-      "description",
-      "draft",
-      "_draft",
-      "_id",
-      "lastmod",
-      "_locale",
-      "_path",
-      "title",
-      "image",
-    ])
     .limit(config.public.pageSize);
 
   if (!config.public.includeDrafts) {
@@ -46,6 +36,8 @@ const { data: posts } = await useAsyncData("posts", () => {
 
   return query.find();
 });
+
+const posts = postsAsyncData.data.value || [];
 
 let { data: totalPosts } = await useAsyncData("totalPosts", () => {
   let query = queryContent();
