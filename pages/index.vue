@@ -12,7 +12,7 @@ import type Post from "~/models/Post";
 
 const config = useRuntimeConfig();
 
-const { data: posts } = await useAsyncData("posts", () => {
+const { data: posts } = await useAsyncData("firstPagePosts", () => {
   let query = queryContent<Post>()
     .sort({
       date: -1,

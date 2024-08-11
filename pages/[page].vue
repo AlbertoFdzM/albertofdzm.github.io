@@ -24,7 +24,7 @@ const previousPageNumber = computed(() => pageNumber.value - 1);
 const offset = computed(() => pageSize * (pageNumber.value - 1));
 
 const { data: posts } = await useAsyncData(
-  "posts",
+  "paginatedPosts",
   () => {
     let query = queryContent<Post>()
       .sort({
