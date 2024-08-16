@@ -1,0 +1,97 @@
+{
+  "/api-de-personalizacion-de-temas": {
+    "redirect": "/2013/04/api-de-personalizacion-de-temas"
+  },
+  "/bootstrap-el-framework-front-end-instalemos": {
+    "redirect": "/2013/05/bootstrap-el-framework-front-end-instalemos"
+  },
+  "/desarrollo-de-temas-en-wordpress-basico": {
+    "redirect": "/2013/08/desarrollo-de-temas-en-wordpress-basico"
+  },
+  "/como-incluir-mas-hojas-de-estilo-css-tu-tema-en-wordpress": {
+    "redirect": "/2013/09/como-incluir-mas-hojas-de-estilo-css-tu-tema-en-wordpress"
+  },
+  "/git-basico": { "redirect": "/2013/09/git-basico" },
+  "/anadir-o-eliminar-datos-de-contacto-los-usuarios-en-wordpress": {
+    "redirect": "/2013/09/anadir-o-eliminar-datos-de-contacto-los-usuarios-en-wordpress"
+  },
+  "/gestionar-ramas-branch-en-git": {
+    "redirect": "/2013/11/gestionar-ramas-branch-en-git"
+  },
+  "/wordpress-anadir-campos-extra-los-post": {
+    "redirect": "/2013/11/wordpress-anadir-campos-extra-los-post"
+  },
+  "/hacer-un-plugin-en-wordpress": {
+    "redirect": "/2013/12/hacer-un-plugin-en-wordpress"
+  },
+  "/aprende-a-hacer-un-tema-en-wordpress": {
+    "redirect": "/2015/02/aprende-a-hacer-un-tema-en-wordpress"
+  },
+  "/desarrollando-el-conocimiento-de-temas": {
+    "redirect": "/2015/02/desarrollando-el-conocimiento-de-temas"
+  },
+  "/herramientas-para-el-desarrollo-de-temas": {
+    "redirect": "/2015/02/herramientas-para-el-desarrollo-de-temas"
+  },
+  "/desarrollo-web-con-node-basiquisimo": {
+    "redirect": "/2015/03/desarrollo-web-con-node-basiquisimo"
+  },
+  "/creando-una-estructura-html-de-un-tema-wordpress": {
+    "redirect": "/2015/03/creando-una-estructura-html-de-un-tema-wordpress"
+  },
+  "/gulp-tu-mejor-amigo-frontend": {
+    "redirect": "/2015/04/gulp-tu-mejor-amigo-frontend"
+  },
+  "/plantillas-y-estructura-de-carpetas-en-wordpress": {
+    "redirect": "/2015/05/plantillas-y-estructura-de-carpetas-en-wordpress"
+  },
+  "/utilizando-la-api-de-iframe-de-youtube": {
+    "redirect": "/2015/07/utilizando-la-api-de-iframe-de-youtube"
+  },
+  "/estableciendo-las-funciones-de-tu-tema-wordpress": {
+    "redirect": "/2015/07/estableciendo-las-funciones-de-tu-tema-wordpress"
+  },
+  "/seguridad-para-tu-tema-wordpress": {
+    "redirect": "/2015/07/seguridad-para-tu-tema-wordpress"
+  },
+  "/la-plantilla-de-header-de-un-tema-wordpress": {
+    "redirect": "/2015/07/la-plantilla-de-header-de-un-tema-wordpress"
+  },
+  "/libreria-javascript-de-google-apis": {
+    "redirect": "/2016/10/libreria-javascript-de-google-apis"
+  },
+  "/learn-cordova": { "redirect": "/2016/01/learn-cordova" },
+  "/lets-make-a-blog-with-polymer-01": {
+    "redirect": "/2016/10/lets-make-a-blog-with-polymer-01"
+  },
+  "/making-apis-with-node-and-express": {
+    "redirect": "/2016/12/making-apis-with-node-and-express"
+  },
+  "/api-routing-with-express": {
+    "redirect": "/2016/12/api-routing-with-express"
+  },
+  "/mongoose-mongodb-and-express": {
+    "redirect": "/2017/01/mongoose-mongodb-and-express"
+  },
+  "/documenting-your-api-with-api-blueprint": {
+    "redirect": "/2017/08/documenting-your-api-with-api-blueprint"
+  },
+  "/best-way-to-install-nodejs-on-windows": {
+    "redirect": "/2017/06/best-way-to-install-nodejs-on-windows"
+  },
+  "/clean-google-analytics-metrics": {
+    "redirect": "/2017/08/clean-google-analytics-metrics"
+  },
+  "/testing-an-api-against-documentation": {
+    "redirect": "/2017/09/testing-an-api-against-documentation"
+  },
+  "/continuous-integration-for-express-apis-with-travis-ci": {
+    "redirect": "/2017/11/continuous-integration-for-express-apis-with-travis-ci"
+  },
+  "/build-an-app-with-electron-and-typescript-getting-started": {
+    "redirect": "/1970/01/build-an-app-with-electron-and-typescript-getting-started"
+  },
+  "/build-an-app-with-electron-and-typescript-managing-windows-and-navigation": {
+    "redirect": "/1970/01/build-an-app-with-electron-and-typescript-managing-windows-and-navigation"
+  }
+}

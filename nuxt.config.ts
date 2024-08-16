@@ -1,5 +1,20 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const redirectsFilepath = path.resolve(__dirname, "redirects.json");
+
+let redirects = {};
+
+if (fs.existsSync(redirectsFilepath)) {
+  const redirectsData = fs.readFileSync(redirectsFilepath, {
+    encoding: "utf-8",
+  });
+
+  redirects = JSON.parse(redirectsData);
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
+const config = defineNuxtConfig({
   app: {
     baseURL: "/",
     head: {
@@ -41,10 +56,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
   ],
 
-  routeRules: {
-    "/": { prerender: true },
-  },
-
   compatibilityDate: "2024-07-14",
 
   content: {
@@ -80,6 +91,11 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    ...redirects,
+    "/": { prerender: true },
+  },
+
   runtimeConfig: {
     public: {
       includeDrafts: false,
@@ -102,3 +118,5 @@ export default defineNuxtConfig({
     typeCheck: false,
   },
 });
+
+export default config;
